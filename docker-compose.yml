@@ -1,0 +1,38 @@
+services:
+  erddap:
+    image: axiom/docker-erddap:2.23-jdk17-openjdk
+    restart: unless-stopped
+    ports:
+      - "8083:8080"
+    volumes:
+      - ./erddap/conf/robots.txt:/usr/local/tomcat/webapps/ROOT/robots.txt
+      - ./erddap/content:/usr/local/tomcat/content/erddap
+      - ./erddap/data:/erddapData
+      - ./datasets:/datasets
+    environment:
+      #note: these can also be set in /usr/local/tomcat/bin/config.sh
+      ERDDAP_MIN_MEMORY: 1G
+      ERDDAP_MAX_MEMORY: 2G
+      ERDDAP_bigParentDirectory: /erddapData/
+      ERDDAP_baseUrl: http://localhost:8083
+      ERDDAP_baseHttpsUrl: https://localhost:8083
+      ERDDAP_flagKeyKey: jBsys9xYauj
+      ERDDAP_emailEverythingT: olsoncj@hawaii.edu
+      ERDDAP_emailDailyReportsTo:
+      ERDDAP_emailFromAddress:
+      ERDDAP_emailUserName:
+      ERDDAP_emailPassword:
+      ERDDAP_emailProperties:
+      ERDDAP_emailSmtpHost:
+      ERDDAP_emailSmtpPort:
+      ERDDAP_adminInstitution: Pacific Islands Integrated Ocean Observing System (PacIOOS)
+      ERDDAP_adminInstitutionUrl: https://pacioos.hawaii.edu
+      ERDDAP_adminIndividualName: PacIOOS Data Manager
+      ERDDAP_adminPosition: Data Manager
+      ERDDAP_adminPhone: "808-956-8111"
+      ERDDAP_adminAddress: "2500 Campus Rd"
+      ERDDAP_adminCity: Honolulu
+      ERDDAP_adminStateOrProvince: HI
+      ERDDAP_adminPostalCode: "96822"
+      ERDDAP_adminCountry: USA
+      ERDDAP_adminEmail: info@pacioos.org
