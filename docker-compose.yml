@@ -8,7 +8,7 @@ services:
       - ./erddap/conf/robots.txt:/usr/local/tomcat/webapps/ROOT/robots.txt
       - ./erddap/content:/usr/local/tomcat/content/erddap
       - ./erddap/data:/erddapData
-      - ./datasets:/datasets
+      - ./erddap/datasets:/datasets
     environment:
       #note: these can also be set in /usr/local/tomcat/bin/config.sh
       ERDDAP_MIN_MEMORY: 1G
