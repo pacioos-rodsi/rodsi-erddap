@@ -1,0 +1,451 @@
+    <!-- Hui O Ka Wai Ola Water Quality Data: From CSV -->
+
+    <!-- NOTE: This dataset only kept active to download annual .ncCF files,
+         which feed into final "hui_water_quality" dataset below. NetCDF
+         has much better performance compared to CSV in ERDDAP; see:
+         https://coastwatch.pfeg.noaa.gov/erddap/download/setupDatasetsXml.html#EDDTableFromAsciiFiles
+         https://coastwatch.pfeg.noaa.gov/erddap/download/setupDatasetsXml.html#EDDTableFromFiles_MillionsOfFiles      
+    -->
+
+    <dataset type="EDDTableFromAsciiFiles" datasetID="hui_water_quality_csv" active="false">
+        <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. -->
+        <defaultGraphQuery>longitude,latitude,turbidity&amp;time&gt;=max(time)-1week&amp;.draw=markers</defaultGraphQuery>
+        <!-- EDDTableFromAsciiFiles needs orderBy("time") if file un-sorted;
+             otherwise, if CSV file pre-sorted, no need: -->
+        <defaultDataQuery>&amp;time&gt;=max(time)-1week&amp;time&lt;=max(time)</defaultDataQuery>
+        <fileDir>/datasets/hui/raw_data/</fileDir>
+        <fileNameRegex>.*\.csv</fileNameRegex>
+        <recursive>false</recursive>
+        <pathRegex>.*</pathRegex>
+        <metadataFrom>last</metadataFrom>
+        <charset>UTF-8</charset>
+        <columnSeparator>,</columnSeparator>
+        <columnNamesRow>1</columnNamesRow>
+        <firstDataRow>2</firstDataRow>
+        <fileTableInMemory>false</fileTableInMemory>
+        <accessibleViaFiles>false</accessibleViaFiles>
+        <iso19115File>http://192.168.100.40/metadata/hui_water_quality.xml</iso19115File>
+        <fgdcFile>http://192.168.100.40/metadata/hui_water_quality.xml?format=fgdc</fgdcFile>
+        <addAttributes>
+            <att name="title">Hui O Ka Wai Ola Water Quality Data</att>
+            <att name="summary">The goal of the Hui O Ka Wai Ola (Association Of The Living Waters) citizen-science based water quality program is to increase the capacity for monitoring water quality in Maui (2016-) and Lanai (2023-) coastal waters by generating reliable data to assess long-term water-quality conditions and detect temporal trends. These data augment the data produced by the Hawaii Department of Health (DOH) Clean Water Branch (CWB) beach monitoring program.
+    
+Data are collected and analyzed every two or three weeks for physical and chemical parameters, including ocean salinity, pH, temperature, organic nutrients (nitrogen and phosphorous compounds), dissolved oxygen (DO), and total suspended sediment (TSS). Some water samples are immediately tested at mobile labs while others are processed for testing at University of Hawaii and/or other labs.</att>
+            <att name="id">hui_water_quality</att>
+            <att name="naming_authority">org.pacioos</att>
+            <att name="Conventions">CF-1.6, ACDD-1.3</att>
+            <att name="metadata_link">http://pacioos.org/metadata/hui_water_quality.html</att>
+            <att name="ISO_Topic_Categories">climatologyMeteorologyAtmosphere, environment, health, oceans</att>
+            <att name="keywords">Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Ammonia, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Marine Geochemistry, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Nitrate, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Nitrite, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Nitrogen, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Oxygen, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; pH, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Phosphate, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Phosphorus, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Silicate, Earth Science &gt; Oceans &gt; Ocean Optics &gt; Turbidity, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Water Temperature, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, Earth Science &gt; Oceans &gt; Water Quality &gt; Ocean Contaminants</att>
+            <att name="keywords_vocabulary">GCMD Science Keywords</att>
+            <att name="platform">In Situ Land-based Platforms &gt; Ocean Platform/Ocean Stations &gt; Coastal Stations</att>
+            <att name="platform_vocabulary">GCMD Platform Keywords</att>
+            <att name="instrument">In Situ/Laboratory Instruments &gt; Chemical Meters/Analyzers &gt; &gt; &gt; Autoanalyzer, In Situ/Laboratory Instruments &gt; Chemical Meters/Analyzers &gt; &gt; &gt; pH Meters, In Situ/Laboratory Instruments &gt; Conductivity Sensors, In Situ/Laboratory Instruments &gt; Photon/Optical Detectors &gt; &gt; &gt; Turbidity Meters, In Situ/Laboratory Instruments &gt; Samplers &gt; Bottles/Flasks/Jars, In Situ/Laboratory Instruments &gt; Temperature/Humidity Sensors &gt; &gt; &gt; Temperature Sensors</att>
+            <att name="instrument_vocabulary">GCMD Instrument Keywords</att>
+            <att name="locations">Continent &gt; North America &gt; United States Of America &gt; Hawaii, Ocean &gt; Pacific Ocean &gt; Central Pacific Ocean &gt; Hawaiian Islands &gt; Maui, Ocean &gt; Pacific Ocean &gt; Central Pacific Ocean &gt; Hawaiian Islands &gt; Lanai</att>
+            <att name="locations_vocabulary">GCMD Location Keywords</att>
+            <att name="standard_name_vocabulary">CF Standard Name Table v39</att>
+            <att name="history">2016-06-14T18:03:00Z Project begins. First data samples collected.
+2018-08-24T00:00:00Z PacIOOS begins ingesting Hui O Ka Wai Ola data spreadsheets into PacIOOS ERDDAP data server.
+2023-06-16T18:00:00Z First data observation collected on Lanai.</att>
+            <att name="comment">Please visit https://www.huiokawaiola.com for full methods and further information.</att>
+            <att name="geospatial_lat_min" type="double">20.5241</att>
+            <att name="geospatial_lat_max" type="double">21.0736</att>
+            <att name="geospatial_lon_min" type="double">-156.8935</att>
+            <att name="geospatial_lon_max" type="double">-155.9193</att>
+            <att name="geospatial_vertical_min" type="double">0.0</att>
+            <att name="geospatial_vertical_max" type="double">0.0</att>
+            <att name="geospatial_vertical_positive">up</att>
+            <att name="geospatial_bounds">POLYGON ((20.5241 -156.8935, 21.0736 -156.8935, 21.0736 -155.9193, 20.5241 -155.9193, 20.5241 -156.8935))</att>
+            <att name="geospatial_bounds_crs">EPSG:4326</att>
+            <att name="time_coverage_start">2016-06-14T18:03:00Z</att>
+            <att name="time_coverage_end">present</att>
+            <att name="geospatial_lat_units">degrees_north</att>
+            <att name="geospatial_lat_resolution" type="double">0.0</att>
+            <att name="geospatial_lon_units">degrees_north</att>
+            <att name="geospatial_lon_resolution" type="double">0.0</att>
+            <att name="geospatial_vertical_units">meters</att>
+            <att name="geospatial_vertical_resolution" type="double">0.0</att>
+            <att name="creator_name">Hui O Ka Wai Ola</att>
+            <att name="creator_institution">Hui O Ka Wai Ola</att>
+            <att name="creator_email">huiokawaiola@gmail.com</att>
+            <att name="creator_url">https://www.huiokawaiola.com</att>
+            <att name="creator_type">institution</att>
+            <att name="date_created">2016-06-14</att>
+            <att name="date_issued">2018-08-23</att>
+            <att name="date_modified">2016-06-14</att>
+            <att name="date_metadata_modified">2023-02-21</att>
+            <att name="institution">Hui O Ka Wai Ola</att>
+            <att name="project">Hui O Ka Wai Ola</att>
+            <att name="program">Hui O Ka Wai Ola</att>
+            <att name="publisher_name">Pacific Islands Ocean Observing System (PacIOOS)</att>
+            <att name="publisher_institution">Pacific Islands Ocean Observing System (PacIOOS)</att>
+            <att name="publisher_email">info@pacioos.org</att>
+            <att name="publisher_url">http://pacioos.org</att>
+            <att name="publisher_type">institution</att>
+            <att name="processing_level">provisional</att>
+            <att name="license">The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies. Neither the data Contributor, University of Hawaii, PacIOOS, NOAA, State of Hawaii nor the United States Government, nor any of their employees or contractors, makes any warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, or assumes any legal liability for the accuracy, completeness, or usefulness, of this information.</att>
+            <att name="acknowledgement">The Pacific Islands Ocean Observing System (PacIOOS) is funded through the National Oceanic and Atmospheric Administration (NOAA) as a Regional Association within the U.S. Integrated Ocean Observing System (IOOS). PacIOOS is coordinated by the University of Hawaii School of Ocean and Earth Science and Technology (SOEST). Hui O Ka Wai Ola is a partnership between The Nature Conservancy (TNC) Hawaii, Maui Nui Marine Resource Council, and West Maui Ridge to Reef (R2R) Initiative and supported by NOAA Coral Reef Conservation Program, National Fish and Wildlife Foundation (NFWF), Lahainaluna High School, Maui County, and North Beach-West Maui Benefit Fund, Inc.</att>
+            <att name="cdm_data_type">Point</att>
+            <att name="source">in situ measurements and water samples</att>
+            <att name="references">https://www.huiokawaiola.com/data.html; Falinski, Kim, Dana Reed, Tova Callender, Emily Fielding, Robin Newbold, and Alana Yurkanin. (2018). Hui O Ka Wai Ola Water Quality Data [Data set]. Zenodo. http://doi.org/10.5281/zenodo.1173717.</att>
+            <!-- ERDDAP-specific: -->
+            <att name="infoUrl">https://www.huiokawaiola.com</att>
+            <att name="sourceUrl">https://www.huiokawaiola.com</att>
+            <att name="subsetVariables">location_id, location_name, session_id</att>
+        </addAttributes>
+        <dataVariable>
+            <sourceName>Datetime</sourceName>
+            <destinationName>time</destinationName>
+            <dataType>String</dataType>
+            <addAttributes>
+                <att name="long_name">time</att>
+                <att name="standard_name">time</att>
+                <att name="units">yyyy-MM-dd'T'HH:mm:ss-10:00</att>
+                <!-- Need this so ERDDAP will convert to UTC/Z: -->
+                <att name="time_zone">US/Hawaii</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>Lat</sourceName>
+            <destinationName>latitude</destinationName>
+            <dataType>double</dataType>
+            <addAttributes>
+                <att name="long_name">latitude</att>
+                <att name="standard_name">latitude</att>
+                <att name="units">degrees_north</att>
+                <att name="colorBarMinimum" type="double">-90.0</att>
+                <att name="colorBarMaximum" type="double">90.0</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>Long</sourceName>
+            <destinationName>longitude</destinationName>
+            <dataType>double</dataType>
+            <addAttributes>
+                <att name="long_name">longitude</att>
+                <att name="standard_name">longitude</att>
+                <att name="units">degrees_east</att>
+                <att name="colorBarMinimum" type="double">-180.0</att>
+                <att name="colorBarMaximum" type="double">180.0</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>Station</sourceName>
+            <destinationName>location_id</destinationName>
+            <dataType>String</dataType>
+            <addAttributes>
+                <att name="long_name">sampling site identifier</att>
+                <att name="ioos_category">Identifier</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>SiteName</sourceName>
+            <destinationName>location_name</destinationName>
+            <dataType>String</dataType>
+            <addAttributes>
+                <att name="long_name">location name</att>
+                <att name="ioos_category">Location</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>SampleID</sourceName>
+            <destinationName>sample_id</destinationName>
+            <dataType>String</dataType>
+            <addAttributes>
+                <att name="long_name">sample identifier</att>
+                <att name="ioos_category">Identifier</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>Session</sourceName>
+            <destinationName>session_id</destinationName>
+            <dataType>byte</dataType>
+            <addAttributes>
+                <att name="long_name">sampling session identifier</att>
+                <att name="ioos_category">Identifier</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>Temp</sourceName>
+            <destinationName>water_temperature</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">water temperature</att>
+                <att name="standard_name">sea_water_temperature</att>
+                <att name="units">Celsius</att>    
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">21</att>
+                <att name="colorBarMaximum" type="double">31</att>
+                <att name="ioos_category">Temperature</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>Salinity</sourceName>
+            <destinationName>salinity</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">salinity PSU</att>
+                <att name="standard_name">sea_water_practical_salinity</att>
+                <att name="units">1</att>
+                <att name="comment">Practical Salinity Units (PSU)</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">10</att>
+                <att name="colorBarMaximum" type="double">40</att>
+                <att name="ioos_category">Salinity</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>Turbidity</sourceName>
+            <destinationName>turbidity</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">turbidity NTU</att>
+                <att name="standard_name">sea_water_turbidity</att>
+                <att name="units">1</att>
+                <att name="comment">Nephelometric Turbidity Units (NTU)</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">0</att>
+                <att name="colorBarMaximum" type="double">10</att>
+                <att name="ioos_category">Optical Properties</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>pH</sourceName>
+            <destinationName>ph</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">pH</att>
+                <att name="standard_name">sea_water_ph_reported_on_total_scale</att>
+                <att name="units">1</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">7</att>
+                <att name="colorBarMaximum" type="double">9</att>
+                <att name="ioos_category">Other</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>DO</sourceName>
+            <destinationName>oxygen</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">dissolved oxygen concentration</att>
+                <att name="standard_name">mass_concentration_of_oxygen_in_sea_water</att>
+                <att name="units">mg/L</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">0</att>
+                <att name="colorBarMaximum" type="double">10</att>
+                <att name="ioos_category">Dissolved O2</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>DO_sat</sourceName>
+            <destinationName>oxygen_saturation</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">dissolved oxygen saturation</att>
+                <att name="standard_name">fractional_saturation_of_oxygen_in_sea_water</att>
+                <att name="units">%</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">0</att>
+                <att name="colorBarMaximum" type="double">100</att>
+                <att name="ioos_category">Dissolved O2</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>TotalN</sourceName>
+            <destinationName>nitrogen</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">total dissolved nitrogen</att>
+                <att name="standard_name">mass_concentration_of_nitrogen_in_sea_water</att>
+                <att name="units">ug/L</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">0</att>
+                <att name="colorBarMaximum" type="double">400</att>
+                <att name="ioos_category">Dissolved Nutrients</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>TotalP</sourceName>
+            <destinationName>phosphorus</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">total dissolved phosphorus</att>
+                <att name="standard_name">mass_concentration_of_phosphorus_in_sea_water</att>
+                <att name="units">ug/L</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">0</att>
+                <att name="colorBarMaximum" type="double">50</att>
+                <att name="ioos_category">Dissolved Nutrients</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>Phosphate</sourceName>
+            <destinationName>phosphate</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">phosphorus as orthophosphate</att>
+                <att name="standard_name">mass_concentration_of_phosphate_in_sea_water</att>
+                <att name="units">ug/L</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">0</att>
+                <att name="colorBarMaximum" type="double">40</att>
+                <att name="ioos_category">Dissolved Nutrients</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>Silicate</sourceName>
+            <destinationName>silicate</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">silicate</att>
+                <att name="standard_name">mass_concentration_of_silicate_in_sea_water</att>
+                <att name="units">ug/L</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">0</att>
+                <att name="colorBarMaximum" type="double">3000</att>
+                <att name="ioos_category">Dissolved Nutrients</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>NNN</sourceName>
+            <destinationName>nitrate_nitrite</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">nitrate plus nitrite</att>
+                <att name="standard_name">mass_concentration_of_nitrate_and_nitrite_in_sea_water</att>
+                <att name="units">ug/L</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">0</att>
+                <att name="colorBarMaximum" type="double">400</att>
+                <att name="ioos_category">Dissolved Nutrients</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>NH4</sourceName>
+            <destinationName>ammonia</destinationName>
+            <dataType>float</dataType>
+            <addAttributes>
+                <att name="long_name">ammonia</att>
+                <att name="standard_name">mass_concentration_of_ammonia_in_sea_water</att>
+                <att name="units">ug/L</att>
+                <att name="_FillValue" type="float">-9999</att>
+                <att name="colorBarMinimum" type="double">0</att>
+                <att name="colorBarMaximum" type="double">50</att>
+                <att name="ioos_category">Dissolved Nutrients</att>
+            </addAttributes>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>QA_Comments</sourceName>
+            <destinationName>qa_comments</destinationName>
+            <dataType>String</dataType>
+            <addAttributes>
+                <att name="long_name">quality assurance issues or comments</att>
+                <att name="ioos_category">Quality</att>
+            </addAttributes>
+        </dataVariable>
+    </dataset>
+
+    <!-- Hui O Ka Wai Ola Water Quality Data: From NetCDF -->
+
+    <dataset type="EDDTableFromNcCFFiles" datasetID="hui_water_quality" active="true">
+        <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. -->
+        <fileDir>/datasets/hui/netcdf_data/</fileDir>
+        <fileNameRegex>hui_water_quality_.*\.nc</fileNameRegex>
+        <recursive>false</recursive>
+        <pathRegex>.*</pathRegex>
+        <metadataFrom>last</metadataFrom>
+        <iso19115File>http://192.168.100.40/metadata/hui_water_quality.xml</iso19115File>
+        <fgdcFile>http://192.168.100.40/metadata/hui_water_quality.xml?format=fgdc</fgdcFile>
+        <removeMVRows>true</removeMVRows>
+        <sortedColumnSourceName>time</sortedColumnSourceName>
+        <defaultGraphQuery>longitude,latitude,turbidity&amp;time&gt;=max(time)-1week&amp;.draw=markers</defaultGraphQuery>
+        <defaultDataQuery>&amp;time&gt;=max(time)-1week&amp;time&lt;=max(time)</defaultDataQuery>
+        <addAttributes>
+            <!-- None needed. All added prior by "hui_water_quality_csv". -->
+        </addAttributes>
+        <dataVariable>
+            <sourceName>time</sourceName>
+            <dataType>double</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>latitude</sourceName>
+            <dataType>double</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>longitude</sourceName>
+            <dataType>double</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>location_id</sourceName>
+            <dataType>String</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>location_name</sourceName>
+            <dataType>String</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>sample_id</sourceName>
+            <dataType>String</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>session_id</sourceName>
+            <dataType>byte</dataType>
+            <addAttributes>
+                <att name="_FillValue">null</att>
+            </addAttributes> 
+        </dataVariable>
+        <dataVariable>
+            <sourceName>water_temperature</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>salinity</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>turbidity</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>ph</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>oxygen</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>oxygen_saturation</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>nitrogen</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>phosphorus</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>phosphate</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>silicate</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>nitrate_nitrite</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>ammonia</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>qa_comments</sourceName>
+            <dataType>String</dataType>
+        </dataVariable>
+    </dataset>
