@@ -19,7 +19,7 @@ Subdirectories that will be created by ERDDAP are:
 The ERDDAP log file (log.txt) will be put in this directory.
 At ERD, we use '/u00/cwatch/erddap/' for releases.
 -->
-	<bigParentDirectory>/data/erddap/data</bigParentDirectory>
+	<bigParentDirectory>/data/erddap/data/</bigParentDirectory>
 
     <!-- baseUrl is the start of the public url, to which "/erddap"
 is appended. For example:
@@ -31,7 +31,7 @@ For ERD releases, we use
 If you want to encourage all users to use https (not http),
   make the baseUrl the same as the baseHttpsUrl (see below).
 -->
-    <baseUrl>http://erddap.rodsi.pacioos.dev</baseUrl>
+    <baseUrl>https://erddap.rodsi.pacioos.dev</baseUrl>
 
     <!-- This is a variant of <baseUrl> which is used when
 authentication is active and the user is logged in.
@@ -64,7 +64,7 @@ See the email account settings below.
 Whether or not you set up the email system, all potential email messages
 are logged to an emailLogYEAR-MONTH.txt file in [bigParentDirectory]/logs/.
 -->
-    <emailEverythingTo>olsoncj@hawaii.edu</emailEverythingTo>
+    <emailEverythingTo></emailEverythingTo>
     <!-- optional:
 <emailDailyReportsTo>your.boss@yourInstitution.edu</emailDailyReportsTo>
 -->
