@@ -1,0 +1,232 @@
+<!-- NOTE! Since the source files don't have any metadata, you must add metadata
+  below, notably 'units' for each of the dataVariables. -->
+<dataset type="EDDTableFromAsciiFiles" datasetID="HydroCAT_EP_V2_SEN_4_Baby_beach" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/maui_fires/hydrocat/</fileDir>
+    <fileNameRegex>HydroCAT_EP_V2_SEN_4_Baby_beach\.csv</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <charset>ISO-8859-1</charset>
+    <columnSeparator></columnSeparator>
+    <columnNamesRow>1</columnNamesRow>
+    <firstDataRow>2</firstDataRow>
+    <sortedColumnSourceName>Date</sortedColumnSourceName>
+    <sortFilesBySourceNames>Date</sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="cdm_data_type">Other</att>
+        <att name="Conventions">COARDS, CF-1.10, ACDD-1.3</att>
+        <att name="creator_name">University of Hawaii Manoa</att>
+        <att name="creator_type">institution</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">University of Hawaii Manoa</att>
+        <att name="keywords">celsius, chemistry, chlorophyll, Chlorophyll_StdDev, color, concentration, concentration_of_chlorophyll_in_sea_water, conductivity, data, date, decibar, density, depth, dev, dissolved, dissolved o2, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, electrical, event, Event_Flags, fires, flags, frame, FrameSync, hawaii, hydrocat, manoa, maui, mg/l, nephelometric, ntu, O2, ocean, ocean color, oceans, oxygen, Oxygen_Sat, percent, practical, pressure, profiler, quality, response, salinity, salinity-temperature-depth, sat, science, sea, sea_water_electrical_conductivity, sea_water_practical_salinity, seawater, sen, Spec_Conductivity, station, statistics, std, sync, temperature, time, time2, turbidity, Turbidity_StdDev, ug/l, units, university, utc-10, water</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="subsetVariables">FrameSync</att>
+        <att name="summary">Maui Fires Response - HydroCAT data from station SEN_4</att>
+        <att name="title">Maui Fires Response, HydroCAT data from station SEN_4</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>FrameSync</sourceName>
+        <destinationName>FrameSync</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Frame Sync</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Temperature (Celsius)</sourceName>
+        <destinationName>Temperature</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Temperature (Celsius)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Pressure (Decibar)</sourceName>
+        <destinationName>Pressure</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Pressure</att>
+            <att name="long_name">Pressure (Decibar)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Oxygen (mg/L)</sourceName>
+        <destinationName>Oxygen</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Dissolved O2</att>
+            <att name="long_name">Oxygen (mg/L)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pH (pH)</sourceName>
+        <destinationName>pH</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">P H (P H)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Chlorophyll (ug/l)</sourceName>
+        <destinationName>Chlorophyll</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="colorBarMaximum" type="double">30.0</att>
+            <att name="colorBarMinimum" type="double">0.03</att>
+            <att name="colorBarScale">Log</att>
+            <att name="ioos_category">Ocean Color</att>
+            <att name="long_name">Concentration Of Chlorophyll In Sea Water</att>
+            <att name="standard_name">concentration_of_chlorophyll_in_sea_water</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Turbidity (NTU)</sourceName>
+        <destinationName>Turbidity</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Turbidity (NTU)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Chlorophyll StdDev (ug/l)</sourceName>
+        <destinationName>Chlorophyll_StdDev</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">50.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+            <att name="long_name">Chlorophyll Std Dev (ug/l)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Turbidity StdDev (NTU)</sourceName>
+        <destinationName>Turbidity_StdDev</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">50.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Statistics</att>
+            <att name="long_name">Turbidity Std Dev (NTU)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Salinity (PSU)</sourceName>
+        <destinationName>Salinity</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">37.0</att>
+            <att name="colorBarMinimum" type="double">32.0</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Practical Salinity</att>
+            <att name="standard_name">sea_water_practical_salinity</att>
+            <att name="units">PSU</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Spec Conductivity (uS/cm)</sourceName>
+        <destinationName>Spec_Conductivity</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">40.0</att>
+            <att name="colorBarMinimum" type="double">30.0</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="long_name">Sea Water Electrical Conductivity</att>
+            <att name="standard_name">sea_water_electrical_conductivity</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Oxygen Sat (%)</sourceName>
+        <destinationName>Oxygen_Sat</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Dissolved O2</att>
+            <att name="long_name">Oxygen Sat (&#37;)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Date</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Date</att>
+            <att name="source_name">Date</att>
+            <att name="standard_name">time</att>
+            <att name="time_precision">1970-01-01</att>
+            <att name="units">dd MMM yyyy</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Time (UTC-10:00)</sourceName>
+        <destinationName>time2</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Time (UTC-10:00)</att>
+            <att name="source_name">Time (UTC-10:00)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Event Flags</sourceName>
+        <destinationName>Event_Flags</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="colorBarMaximum" type="double">150.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Quality</att>
+            <att name="long_name">Event Flags</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
