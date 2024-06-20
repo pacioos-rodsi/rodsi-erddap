@@ -70,7 +70,7 @@ In discussion with Bob Simons, I discovered that updateEveryNMillis is not
 working on erdakine ERDDAP because our data are stored remotely on pae-paha (via
 direct mount). In order for updateEveryNMillis to function, it relies on
 inotify system messages to inform ERDDAP of file updates. These are apparently
-not getting sent for the data on /export/data/. For that reason, we cannot
+not getting sent for the data on /datasets/. For that reason, we cannot
 rely on updateEveryNMillis with our system architecture, unfortunately. For
 datasets where this is critical functionality (e.g., ACO bottom pressure
 recorder (BPR) for Pacific Tsunami Warning Center), consider storing the data
@@ -13909,7 +13909,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDGridFromNcFiles" datasetID="dhw_5km" active="true">
         <reloadEveryNMinutes>60</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/dhw/</fileDir>
+        <fileDir>/datasets/dhw/</fileDir>
         <fileNameRegex>.*\.nc</fileNameRegex>
         <recursive>true</recursive>
         <pathRegex>.*</pathRegex>
@@ -14223,7 +14223,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDGridFromNcFiles" datasetID="mhw_5km" active="true">
         <reloadEveryNMinutes>60</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/mhw/</fileDir>
+        <fileDir>/datasets/mhw/</fileDir>
         <fileNameRegex>.*\.nc</fileNameRegex>
         <recursive>true</recursive>
         <pathRegex>.*</pathRegex>
@@ -14424,7 +14424,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="wqb_04" active="true">
         <reloadEveryNMinutes>20</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/wqb/wqb04/</fileDir>
+        <fileDir>/datasets/wqb/wqb04/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>wqb04_.*\.nc</fileNameRegex>
@@ -14930,7 +14930,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="wqb_05" active="true">
         <reloadEveryNMinutes>20</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/wqb/wqb05/</fileDir>
+        <fileDir>/datasets/wqb/wqb05/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>wqb05_.*\.nc</fileNameRegex>
@@ -15439,7 +15439,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_001" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/ns01/</fileDir>
+        <fileDir>/datasets/nss/ns01/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns01_.*\.nc</fileNameRegex>
@@ -15568,7 +15568,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_002" active="true">
         <reloadEveryNMinutes>20</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/nss/ns02/</fileDir>
+        <fileDir>/datasets/nss/ns02/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns02_.*\.nc</fileNameRegex>
@@ -15954,7 +15954,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_003" active="true">
         <reloadEveryNMinutes>20</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/nss/ns03/</fileDir>
+        <fileDir>/datasets/nss/ns03/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns03_.*\.nc</fileNameRegex>
@@ -16220,7 +16220,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_004" active="true">
         <reloadEveryNMinutes>20</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/nss/ns04/</fileDir>
+        <fileDir>/datasets/nss/ns04/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns04_.*\.nc</fileNameRegex>
@@ -16485,7 +16485,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_005" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. -->
-        <fileDir>/export/data/nss/ns05/</fileDir>
+        <fileDir>/datasets/nss/ns05/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns05_.*\.nc</fileNameRegex>
@@ -16613,7 +16613,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_006" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. -->
-        <fileDir>/export/data/nss/ns06/</fileDir>
+        <fileDir>/datasets/nss/ns06/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns06-.*\.nc</fileNameRegex>
@@ -16741,7 +16741,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_007" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. -->
-        <fileDir>/export/data/nss/ns07/</fileDir>
+        <fileDir>/datasets/nss/ns07/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns07_.*\.nc</fileNameRegex>
@@ -16869,7 +16869,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_008" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/ns08/</fileDir>
+        <fileDir>/datasets/nss/ns08/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns08_.*\.nc</fileNameRegex>
@@ -16997,7 +16997,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_009" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/ns09/</fileDir>
+        <fileDir>/datasets/nss/ns09/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns09_.*\.nc</fileNameRegex>
@@ -17126,7 +17126,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_010" active="true">
         <reloadEveryNMinutes>20</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/nss/ns10/</fileDir>
+        <fileDir>/datasets/nss/ns10/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns10_.*\.nc</fileNameRegex>
@@ -17511,7 +17511,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_011" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/ns11/</fileDir>
+        <fileDir>/datasets/nss/ns11/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns11_.*\.nc</fileNameRegex>
@@ -17639,7 +17639,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_012" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. -->
-        <fileDir>/export/data/nss/ns12/</fileDir>
+        <fileDir>/datasets/nss/ns12/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns12-.*\.nc</fileNameRegex>
@@ -17815,7 +17815,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_013" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/ns13/</fileDir>
+        <fileDir>/datasets/nss/ns13/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns13_.*\.nc</fileNameRegex>
@@ -17979,7 +17979,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_015" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. -->
-        <fileDir>/export/data/nss/ns15/</fileDir>
+        <fileDir>/datasets/nss/ns15/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns15-.*\.nc</fileNameRegex>
@@ -18107,7 +18107,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_016" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/ns16/</fileDir>
+        <fileDir>/datasets/nss/ns16/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>ns16_.*\.nc</fileNameRegex>
@@ -18235,7 +18235,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_cwb_001" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/cwb01/</fileDir>
+        <fileDir>/datasets/nss/cwb01/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>cwb01-.*\.nc</fileNameRegex>
@@ -18363,7 +18363,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_cwb_002" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/cwb02/</fileDir>
+        <fileDir>/datasets/nss/cwb02/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>cwb02_.*\.nc</fileNameRegex>
@@ -18491,7 +18491,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_cwb_003" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/cwb03/</fileDir>
+        <fileDir>/datasets/nss/cwb03/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>cwb03_.*\.nc</fileNameRegex>
@@ -18619,7 +18619,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_cwb_004" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/cwb04/</fileDir>
+        <fileDir>/datasets/nss/cwb04/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>cwb04-.*\.nc</fileNameRegex>
@@ -18751,7 +18751,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_wqspp_002" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/pp02/</fileDir>
+        <fileDir>/datasets/nss/pp02/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>pp02_.*\.nc</fileNameRegex>
@@ -18867,7 +18867,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_wqspp_003" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/pp03/</fileDir>
+        <fileDir>/datasets/nss/pp03/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>pp03_.*\.nc</fileNameRegex>
@@ -18995,7 +18995,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_wqspp_004" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/pp04/</fileDir>
+        <fileDir>/datasets/nss/pp04/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>pp04_.*\.nc</fileNameRegex>
@@ -19123,7 +19123,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_wqspp_005" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/pp05/</fileDir>
+        <fileDir>/datasets/nss/pp05/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>pp05_.*\.nc</fileNameRegex>
@@ -19251,7 +19251,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_wqspp_006" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/nss/pp06/</fileDir>
+        <fileDir>/datasets/nss/pp06/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>pp06-.*\.nc</fileNameRegex>
@@ -19379,7 +19379,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_wqspp_007" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. --> 
-        <fileDir>/export/data/nss/pp07/</fileDir>
+        <fileDir>/datasets/nss/pp07/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>pp07_.*\.nc</fileNameRegex>
@@ -19507,7 +19507,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_wqspp_008" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. --> 
-        <fileDir>/export/data/nss/pp08/</fileDir>
+        <fileDir>/datasets/nss/pp08/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>pp08-.*\.nc</fileNameRegex>
@@ -19589,7 +19589,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="nss_wqspp_009" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. --> 
-        <fileDir>/export/data/nss/pp09/</fileDir>
+        <fileDir>/datasets/nss/pp09/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>pp09-.*\.nc</fileNameRegex>
@@ -19677,7 +19677,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="aws_crrf" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. -->
-        <fileDir>/export/data/aws/palau/</fileDir>
+        <fileDir>/datasets/aws/palau/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>crrf_.*\.nc</fileNameRegex>
@@ -19880,7 +19880,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="aws_himb" active="true">
         <reloadEveryNMinutes>60</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/aws/himb/</fileDir>
+        <fileDir>/datasets/aws/himb/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>himb_.*\.nc</fileNameRegex>
@@ -20558,7 +20558,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="aws_hnlpier1" active="true">
         <reloadEveryNMinutes>20</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/aws/hnlpier1/</fileDir>
+        <fileDir>/datasets/aws/hnlpier1/</fileDir>
         <recursive>true</recursive>
         <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
         <fileNameRegex>hnlpier1_.*\.nc</fileNameRegex>
@@ -21052,7 +21052,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_114_003" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_114_003/</fileDir>
+        <fileDir>/datasets/glider/sg_114_003/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -21259,7 +21259,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_114_004" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_114_004/</fileDir>
+        <fileDir>/datasets/glider/sg_114_004/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -21466,7 +21466,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_139_001" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_139_001/</fileDir>
+        <fileDir>/datasets/glider/sg_139_001/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -21673,7 +21673,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_139_002" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_139_002/</fileDir>
+        <fileDir>/datasets/glider/sg_139_002/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -21879,7 +21879,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_139_003" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_139_003/</fileDir>
+        <fileDir>/datasets/glider/sg_139_003/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -22086,7 +22086,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_139_006" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_139_006/</fileDir>
+        <fileDir>/datasets/glider/sg_139_006/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -22294,7 +22294,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_139_007" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_139_007/</fileDir>
+        <fileDir>/datasets/glider/sg_139_007/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -22501,7 +22501,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_139_008" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_139_008/</fileDir>
+        <fileDir>/datasets/glider/sg_139_008/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -22707,7 +22707,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_139_009" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_139_009/</fileDir>
+        <fileDir>/datasets/glider/sg_139_009/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -22917,7 +22917,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_513_008">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>10</reloadEveryNMinutes>
-        <fileDir>/export/data/glider/sg_513_008/</fileDir>
+        <fileDir>/datasets/glider/sg_513_008/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -23084,7 +23084,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_523_001" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_523_001/</fileDir>
+        <fileDir>/datasets/glider/sg_523_001/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -23293,7 +23293,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_523_003" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_523_003/</fileDir>
+        <fileDir>/datasets/glider/sg_523_003/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -23499,7 +23499,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="sg_523_004" active="true">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
-        <fileDir>/export/data/glider/sg_523_004/</fileDir>
+        <fileDir>/datasets/glider/sg_523_004/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -23704,7 +23704,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="sg_523_006" active="true">
         <reloadEveryNMinutes>20</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/glider/sg_523_006/</fileDir>
+        <fileDir>/datasets/glider/sg_523_006/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>p.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -23991,7 +23991,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="Aa" active="false">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes>
-        <fileDir>/export/data/glider/aa/</fileDir>
+        <fileDir>/datasets/glider/aa/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>aa_.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -24079,7 +24079,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="Aa2" active="false">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes>
-        <fileDir>/export/data/glider/aa2/</fileDir>
+        <fileDir>/datasets/glider/aa2/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>aa2_.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -24167,7 +24167,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcFiles" datasetID="NC2" active="false">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes>
-        <fileDir>/export/data/glider/nc2/</fileDir>
+        <fileDir>/datasets/glider/nc2/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>nc2_.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -24258,7 +24258,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="ais_hi_20112012">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Static dataset; no updates. -->
-        <fileDir>/export/data/ais/orbcomm/netcdf_files/point/area0_hawaii/</fileDir>
+        <fileDir>/datasets/ais/orbcomm/netcdf_files/point/area0_hawaii/</fileDir>
         <recursive>false</recursive>
         <fileNameRegex>orbcomm_ais_area0_.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -24439,7 +24439,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="ais_mari_20112012">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Static dataset; no updates. -->
-        <fileDir>/export/data/ais/orbcomm/netcdf_files/point/area1_mariana/</fileDir>
+        <fileDir>/datasets/ais/orbcomm/netcdf_files/point/area1_mariana/</fileDir>
         <recursive>false</recursive>
         <fileNameRegex>orbcomm_ais_area1_.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -24620,7 +24620,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="ais_john_20112012">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Static dataset; no updates. -->
-        <fileDir>/export/data/ais/orbcomm/netcdf_files/point/area2_johnston/</fileDir>
+        <fileDir>/datasets/ais/orbcomm/netcdf_files/point/area2_johnston/</fileDir>
         <recursive>false</recursive>
         <fileNameRegex>orbcomm_ais_area2_.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -24801,7 +24801,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromNcCFFiles" datasetID="ais_rose_20112012">
         <nDimensions>1</nDimensions>
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Static dataset; no updates. -->
-        <fileDir>/export/data/ais/orbcomm/netcdf_files/point/area3_rose/</fileDir>
+        <fileDir>/datasets/ais/orbcomm/netcdf_files/point/area3_rose/</fileDir>
         <recursive>false</recursive>
         <fileNameRegex>orbcomm_ais_area3_.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -24987,7 +24987,7 @@ ERDDAP, Version &erddapVersion;
         <nDimensions>4</nDimensions>
         <reloadEveryNMinutes>1440</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/aco/adcp/recent/</fileDir>
+        <fileDir>/datasets/aco/adcp/recent/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>adp5_.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -25146,7 +25146,7 @@ ERDDAP, Version &erddapVersion;
         <nDimensions>3</nDimensions>
         <reloadEveryNMinutes>1440</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/aco/adcp/recent/</fileDir>
+        <fileDir>/datasets/aco/adcp/recent/</fileDir>
         <recursive>false</recursive> 
         <fileNameRegex>adp5_.*\.nc</fileNameRegex>
         <metadataFrom>last</metadataFrom>
@@ -25448,7 +25448,7 @@ ERDDAP, Version &erddapVersion;
     <dataset type="EDDTableFromAsciiFiles" datasetID="aco_bpr_archive" active="true">
         <reloadEveryNMinutes>60</reloadEveryNMinutes>
         <updateEveryNMillis>1000</updateEveryNMillis> <!-- Data update every second! SORTA WORKS (see comments above)! -->
-        <fileDir>/export/data/aco/pressure/</fileDir>
+        <fileDir>/datasets/aco/pressure/</fileDir>
         <fileNameRegex>.*\.acop</fileNameRegex>
         <recursive>true</recursive>
         <pathRegex>.*</pathRegex>
@@ -25600,7 +25600,7 @@ ERDDAP, Version &erddapVersion;
 
     <dataset type="EDDTableFromFileNames" datasetID="aco_acoustic_test" active="false">
         <!-- Unnecessary?: <reloadEveryNMinutes>...</reloadEveryNMinutes> -->
-        <fileDir>/export/data/aco/acoustic/</fileDir> 
+        <fileDir>/datasets/aco/acoustic/</fileDir> 
         <recursive>false</recursive>
         <fileNameRegex>aco_acoustic\.\d{8}_\d{6}\.wav</fileNameRegex> 
         <addAttributes>
@@ -25711,7 +25711,7 @@ ERDDAP, Version &erddapVersion;
         <updateEveryNMillis>-1</updateEveryNMillis>
         <defaultGraphQuery>channel_1[0][(0):(1)]&amp;.draw=lines&amp;.vars=elapsedTime|time</defaultGraphQuery>
         <defaultDataQuery>&amp;time=min(time)</defaultDataQuery>
-        <fileDir>/export/data/aco/acoustic/96khz/</fileDir>
+        <fileDir>/datasets/aco/acoustic/96khz/</fileDir>
         <fileNameRegex>aco_acoustic\.\d{8}_\d{6}\.wav</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -25819,7 +25819,7 @@ c observations from a depth of about 4,800 m via a submarine fiber optic cable t
         <updateEveryNMillis>-1</updateEveryNMillis>
         <defaultGraphQuery>elapsedTime,channel_1&amp;time=min(time)&amp;elapsedTime&gt;=0&amp;elapsedTime&lt;=1&amp;.draw=lines</defaultGraphQuery>
         <defaultDataQuery>channel_1</defaultDataQuery><!--&amp;time&gt;=min(time)&amp;time&lt;=max(time)</defaultDataQuery>-->
-        <fileDir>/export/data/aco/acoustic/96khz/</fileDir>
+        <fileDir>/datasets/aco/acoustic/96khz/</fileDir>
         <fileNameRegex>aco_acoustic\.\d{8}_\d{6}\.wav</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -25972,7 +25972,7 @@ c observations from a depth of about 4,800 m via a submarine fiber optic cable t
         <updateEveryNMillis>-1</updateEveryNMillis>
         <defaultGraphQuery>elapsedTime,channel_1&amp;time=min(time)&amp;elapsedTime&gt;=0&amp;elapsedTime&lt;=1&amp;.draw=lines</defaultGraphQuery>
         <defaultDataQuery>channel_1</defaultDataQuery><!--&amp;time&gt;=min(time)&amp;time&lt;=max(time)</defaultDataQuery>-->
-        <fileDir>/export/data/aco/acoustic/</fileDir>
+        <fileDir>/datasets/aco/acoustic/</fileDir>
         <fileNameRegex>\d{4}-\d{2}-\d{2}--\d{2}\.\d{2}\.wav</fileNameRegex>
         <recursive>true</recursive>
         <pathRegex>.*</pathRegex>
@@ -26629,7 +26629,7 @@ Data were managed through an online repository, the Coral Reef Monitoring Data P
         <!-- EDDTableFromAsciiFiles needs orderBy("time") if file un-sorted;
              otherwise, if CSV file pre-sorted, no need: -->
         <defaultDataQuery>&amp;time&gt;=max(time)-1week&amp;time&lt;=max(time)</defaultDataQuery>
-        <fileDir>/export/data/hui/raw_data/</fileDir>
+        <fileDir>/datasets/hui/raw_data/</fileDir>
         <fileNameRegex>.*\.csv</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -26967,7 +26967,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="hui_water_quality" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. -->
-        <fileDir>/export/data/hui/netcdf_data/</fileDir>
+        <fileDir>/datasets/hui/netcdf_data/</fileDir>
         <fileNameRegex>hui_water_quality_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -27087,10 +27087,10 @@ Data are collected and analyzed every two or three weeks for physical and chemic
         the files from sonoflawelawe directly; otherwise, we have duplicate set
         of the photos on sonoflawelawe and pae-paha, which is not ideal:
         -->
-        <fileDir>/export/data/beach_cam/beachcam_001/</fileDir>
+        <fileDir>/datasets/beach_cam/beachcam_001/</fileDir>
         <fileNameRegex>beachcam_001\.[0-9]{8}T[0-9]{6}\.jpg</fileNameRegex>
         <recursive>true</recursive>
-        <!--<pathRegex>/export/data/beach_cam/sheraton2/[0-9]{4}-[0-9]{2}-[0-9]{2}/</pathRegex> (pae-paha) -->
+        <!--<pathRegex>/datasets/beach_cam/sheraton2/[0-9]{4}-[0-9]{2}-[0-9]{2}/</pathRegex> (pae-paha) -->
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
         <iso19115File>http://192.168.100.40/metadata/beachcam_001.xml</iso19115File>
         <fgdcFile>http://192.168.100.40/metadata/beachcam_001.xml?format=fgdc</fgdcFile>
@@ -27324,10 +27324,10 @@ Data are collected and analyzed every two or three weeks for physical and chemic
         the files from sonoflawelawe directly; otherwise, we have duplicate set
         of the photos on sonoflawelawe and pae-paha, which is not ideal:
         -->
-        <fileDir>/export/data/beach_cam/beachcam_001/</fileDir>
+        <fileDir>/datasets/beach_cam/beachcam_001/</fileDir>
         <fileNameRegex>beachcam_001\.[0-9]{8}T[0-9]{6}\.jpg</fileNameRegex>
         <recursive>true</recursive>
-        <!--<pathRegex>/export/data/beach_cam/sheraton2/[0-9]{4}-[0-9]{2}-[0-9]{2}/</pathRegex> (pae-paha) -->
+        <!--<pathRegex>/datasets/beach_cam/sheraton2/[0-9]{4}-[0-9]{2}-[0-9]{2}/</pathRegex> (pae-paha) -->
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
         <iso19115File>http://192.168.100.40/metadata/beachcam_001.xml</iso19115File>
         <fgdcFile>http://192.168.100.40/metadata/beachcam_001.xml?format=fgdc</fgdcFile>
@@ -27561,10 +27561,10 @@ Data are collected and analyzed every two or three weeks for physical and chemic
         the files from sonoflawelawe directly; otherwise, we have duplicate set
         of the photos on sonoflawelawe and pae-paha, which is not ideal:
         -->
-        <fileDir>/export/data/beach_cam/beachcam_002/</fileDir>
+        <fileDir>/datasets/beach_cam/beachcam_002/</fileDir>
         <fileNameRegex>beachcam_002\.[0-9]{8}T[0-9]{6}\.jpg</fileNameRegex>
         <recursive>true</recursive>
-        <!--<pathRegex>/export/data/beach_cam/sheraton1/[0-9]{4}-[0-9]{2}-[0-9]{2}/</pathRegex> (pae-paha)-->
+        <!--<pathRegex>/datasets/beach_cam/sheraton1/[0-9]{4}-[0-9]{2}-[0-9]{2}/</pathRegex> (pae-paha)-->
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
         <iso19115File>http://192.168.100.40/metadata/beachcam_002.xml</iso19115File>
         <fgdcFile>http://192.168.100.40/metadata/beachcam_002.xml?format=fgdc</fgdcFile>
@@ -27798,10 +27798,10 @@ Data are collected and analyzed every two or three weeks for physical and chemic
         the files from sonoflawelawe directly; otherwise, we have duplicate set
         of the photos on sonoflawelawe and pae-paha, which is not ideal:
         -->
-        <fileDir>/export/data/beach_cam/beachcam_003/</fileDir>
+        <fileDir>/datasets/beach_cam/beachcam_003/</fileDir>
         <fileNameRegex>beachcam_003\.[0-9]{8}T[0-9]{6}\.jpg</fileNameRegex>
         <recursive>true</recursive>
-        <!--<pathRegex>/export/data/beach_cam/waimea1/[0-9]{4}-[0-9]{2}-[0-9]{2}/</pathRegex> (pae-paha) -->
+        <!--<pathRegex>/datasets/beach_cam/waimea1/[0-9]{4}-[0-9]{2}-[0-9]{2}/</pathRegex> (pae-paha) -->
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
         <iso19115File>http://192.168.100.40/metadata/beachcam_003.xml</iso19115File>
         <fgdcFile>http://192.168.100.40/metadata/beachcam_003.xml?format=fgdc</fgdcFile>
@@ -28035,10 +28035,10 @@ Data are collected and analyzed every two or three weeks for physical and chemic
         the files from sonoflawelawe directly; otherwise, we have duplicate set
         of the photos on sonoflawelawe and pae-paha, which is not ideal:
         -->
-        <fileDir>/export/data/beach_cam/beachcam_004/</fileDir>
+        <fileDir>/datasets/beach_cam/beachcam_004/</fileDir>
         <fileNameRegex>beachcam_004\.[0-9]{8}T[0-9]{6}\.jpg</fileNameRegex>
         <recursive>true</recursive>
-        <!--<pathRegex>/export/data/beach_cam/waimea2/[0-9]{4}-[0-9]{2}-[0-9]{2}/</pathRegex> (pae-paha) -->
+        <!--<pathRegex>/datasets/beach_cam/waimea2/[0-9]{4}-[0-9]{2}-[0-9]{2}/</pathRegex> (pae-paha) -->
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Decommissioned; no updates. -->
         <iso19115File>http://192.168.100.40/metadata/beachcam_004.xml</iso19115File>
         <fgdcFile>http://192.168.100.40/metadata/beachcam_004.xml?format=fgdc</fgdcFile>
@@ -33970,7 +33970,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_176025" active="false">
         <reloadEveryNMinutes>60</reloadEveryNMinutes>
         <updateEveryNMillis>10000</updateEveryNMillis>
-        <fileDir>/export/data/sharks/176025/zzz_obsolete/netcdf_data/</fileDir>
+        <fileDir>/datasets/sharks/176025/zzz_obsolete/netcdf_data/</fileDir>
         <fileNameRegex>176025_.*\.nc</fileNameRegex>
         <recursive>true</recursive>
         <pathRegex>.*</pathRegex>
@@ -34092,7 +34092,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_profiles_171406" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent/irregular updates; triggered programmatically. -->
-        <fileDir>/export/data/sharks/171406/</fileDir>
+        <fileDir>/datasets/sharks/171406/</fileDir>
         <fileNameRegex>171406_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -34319,7 +34319,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_profiles_171409" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent/irregular updates; triggered programmatically. -->
-        <fileDir>/export/data/sharks/171409/</fileDir>
+        <fileDir>/datasets/sharks/171409/</fileDir>
         <fileNameRegex>171409_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -34546,7 +34546,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_profiles_176025" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent/irregular updates; triggered programmatically. -->
-        <fileDir>/export/data/sharks/176025/</fileDir>
+        <fileDir>/datasets/sharks/176025/</fileDir>
         <fileNameRegex>176025_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -34773,7 +34773,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_profiles_176027" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent/irregular updates; triggered programmatically. -->
-        <fileDir>/export/data/sharks/176027/</fileDir>
+        <fileDir>/datasets/sharks/176027/</fileDir>
         <fileNameRegex>176027_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -35000,7 +35000,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_profiles_176028" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent/irregular updates; triggered programmatically. -->
-        <fileDir>/export/data/sharks/176028/</fileDir>
+        <fileDir>/datasets/sharks/176028/</fileDir>
         <fileNameRegex>176028_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -35227,7 +35227,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_profiles_176029" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent/irregular updates; triggered programmatically. -->
-        <fileDir>/export/data/sharks/176029/</fileDir>
+        <fileDir>/datasets/sharks/176029/</fileDir>
         <fileNameRegex>176029_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -35454,7 +35454,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_profiles_204412" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent/irregular updates; triggered programmatically. -->
-        <fileDir>/export/data/sharks/204412/</fileDir>
+        <fileDir>/datasets/sharks/204412/</fileDir>
         <fileNameRegex>204412_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -35681,7 +35681,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_profiles_244397" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent/irregular updates; triggered programmatically. -->
-        <fileDir>/export/data/sharks/244397/</fileDir>
+        <fileDir>/datasets/sharks/244397/</fileDir>
         <fileNameRegex>244397_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -35908,7 +35908,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_profiles_244399" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent/irregular updates; triggered programmatically. -->
-        <fileDir>/export/data/sharks/244399/</fileDir>
+        <fileDir>/datasets/sharks/244399/</fileDir>
         <fileNameRegex>244399_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -36135,7 +36135,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
 
     <dataset type="EDDTableFromNcCFFiles" datasetID="himb_shark_profiles_244400" active="true">
         <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent/irregular updates; triggered programmatically. -->
-        <fileDir>/export/data/sharks/244400/</fileDir>
+        <fileDir>/datasets/sharks/244400/</fileDir>
         <fileNameRegex>244400_.*\.nc</fileNameRegex>
         <recursive>false</recursive>
         <pathRegex>.*</pathRegex>
@@ -36366,7 +36366,7 @@ Data are collected and analyzed every two or three weeks for physical and chemic
       <nDimensions>1</nDimensions>
       <reloadEveryNMinutes>60</reloadEveryNMinutes>
       <updateEveryNMillis>10000</updateEveryNMillis>
-      <fileDir>/export/data/floats/infinite/</fileDir>
+      <fileDir>/datasets/floats/infinite/</fileDir>
       <fileNameRegex>infinite_float_00001_ctd.csv</fileNameRegex>
       <recursive>false</recursive>
       <pathRegex>.*</pathRegex>

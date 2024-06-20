@@ -1,0 +1,175 @@
+    <!-- nss_012: Kalama Beach Park, Maui, Hawaii -->
+
+    <dataset type="EDDTableFromNcCFFiles" datasetID="nss_012" active="true">
+        <reloadEveryNMinutes>1000000</reloadEveryNMinutes> <!-- Infrequent manual updates. -->
+        <fileDir>/datasets/nss/ns12/</fileDir>
+        <recursive>true</recursive>
+        <pathRegex>.*/netcdf_data_([0-9]{4})/</pathRegex>
+        <fileNameRegex>ns12-.*\.nc</fileNameRegex>
+        <metadataFrom>last</metadataFrom>
+        <iso19115File>http://192.168.100.40/metadata/nss_012.xml</iso19115File>
+        <fgdcFile>http://192.168.100.40/metadata/nss_012.xml?format=fgdc</fgdcFile>
+        <removeMVRows>true</removeMVRows>
+        <sortedColumnSourceName>time</sortedColumnSourceName>
+        <defaultGraphQuery>time,temperature&amp;time&gt;=max(time)-3days&amp;.draw=lines</defaultGraphQuery>
+        <defaultDataQuery>time,latitude,longitude,depth,station_name,temperature,salinity,turbidity,chlorophyll,pressure&amp;time&gt;=max(time)-3days</defaultDataQuery>
+        <addAttributes>
+            <!-- Add/change NetCDF attributes: -->
+            <att name="date_created">2014-07-19</att>
+            <att name="date_issued">2014-07-19</att>
+            <att name="date_modified">2022-11-04</att>
+            <att name="date_metadata_modified">2022-11-04</att>
+            <att name="time_coverage_duration"></att> <!-- remove: download duration != file duration -->
+            <!-- ERDDAP-specific: -->
+            <att name="infoUrl">http://pacioos.org/water/sensor-kalama/</att>
+            <att name="sourceUrl">http://pacioos.org</att>
+            <att name="cdm_timeseries_variables">station_name, longitude, latitude, depth</att>
+            <att name="subsetVariables">temperature_dm_qd, salinity_dm_qd, chlorophyll_dm_qd, turbidity_dm_qd, pressure_dm_qd, sensor_depth_dm_qd, ph_dm_qd, oxygen_dm_qd, oxygen_saturation_dm_qd, station_name, platform1, instrument1</att>
+        </addAttributes>
+        <dataVariable>
+            <sourceName>time</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>latitude</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>longitude</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>depth</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>station_name</sourceName>
+            <dataType>String</dataType>
+        </dataVariable>
+        <!-- Does not make sense to include in aggregation:
+        <dataVariable>
+            <sourceName>qc_flag</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        -->
+        <dataVariable>
+            <sourceName>temperature</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>salinity</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>turbidity</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>chlorophyll</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>pressure</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>sensor_depth</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>ph</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>oxygen</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>oxygen_saturation</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>temperature_raw</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>temperature_dm_qd</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>salinity_raw</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>salinity_dm_qd</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>turbidity_raw</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>turbidity_dm_qd</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>chlorophyll_raw</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>chlorophyll_dm_qd</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>pressure_raw</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>pressure_dm_qd</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>sensor_depth_raw</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>sensor_depth_dm_qd</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>ph_raw</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>ph_dm_qd</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>oxygen_raw</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>oxygen_dm_qd</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>oxygen_saturation_raw</sourceName>
+            <dataType>float</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>oxygen_saturation_dm_qd</sourceName>
+            <dataType>int</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>platform1</sourceName>
+            <dataType>String</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>instrument1</sourceName>
+            <dataType>String</dataType>
+        </dataVariable>
+        <dataVariable>
+            <sourceName>crs</sourceName>
+            <dataType>String</dataType>
+        </dataVariable>
+    </dataset>
