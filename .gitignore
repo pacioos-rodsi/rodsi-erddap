@@ -1,3 +1,5 @@
+datasets/*
 erddap/data/
 erddap/datasets/
 erddap-gold-standard/
+logs/*
