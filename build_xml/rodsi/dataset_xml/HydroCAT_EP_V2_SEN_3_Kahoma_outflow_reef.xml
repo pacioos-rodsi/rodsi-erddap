@@ -13,8 +13,8 @@
     <columnSeparator></columnSeparator>
     <columnNamesRow>1</columnNamesRow>
     <firstDataRow>2</firstDataRow>
-    <sortedColumnSourceName></sortedColumnSourceName>
-    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <sortedColumnSourceName>&#39;&#39;</sortedColumnSourceName>
+    <sortFilesBySourceNames>&#39;&#39;</sortFilesBySourceNames>
     <fileTableInMemory>false</fileTableInMemory>
     <!-- sourceAttributes>
     </sourceAttributes -->
@@ -29,7 +29,7 @@
         <att name="creator_type">institution</att>
         <att name="infoUrl">???</att>
         <att name="institution">University of Hawaii Manoa</att>
-        <att name="keywords">celsius, chemistry, chlorophyll, Chlorophyll_StdDev, color, concentration, concentration_of_chlorophyll_in_sea_water, conductivity, data, date, decibar, density, depth, dev, dissolved, dissolved o2, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, electrical, event, Event_Flags, fires, flags, frame, FrameSync, hawaii, hydrocat, manoa, maui, mg/l, nephelometric, ntu, O2, ocean, ocean color, oceans, oxygen, Oxygen_Sat, percent, practical, pressure, profiler, quality, response, salinity, salinity-temperature-depth, sat, science, sea, sea_water_electrical_conductivity, sea_water_practical_salinity, seawater, sen, Spec_Conductivity, station, statistics, std, sync, temperature, time, time2, turbidity, Turbidity_StdDev, ug/l, units, university, utc-10, water</att>
+        <att name="keywords">celsius, chemistry, chlorophyll, Chlorophyll_StdDev, color, concentration, concentration_of_chlorophyll_in_sea_water, conductivity, data, date, decibar, density, depth, dev, dissolved, dissolved o2, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, electrical, event, Event_Flags, fires, flags, frame, FrameSync, hawaii, hydrocat, manoa, maui, mg/l, nephelometric, ntu, O2, ocean, ocean color, oceans, oxygen, Oxygen_Sat, percent, practical, pressure, profiler, quality, response, salinity, salinity-temperature-depth, sat, science, sea, sea_water_electrical_conductivity, sea_water_practical_salinity, seawater, sen, Spec_Conductivity, station, statistics, std, sync, temperature, time, time2, timestamp, turbidity, Turbidity_StdDev, ug/l, units, university, unix, Unix_Timestamp, utc-10, water, ymd, YMD_Date</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local files)</att>
@@ -220,6 +220,47 @@
             <att name="colorBarMinimum" type="double">0.0</att>
             <att name="ioos_category">Quality</att>
             <att name="long_name">Event Flags</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>YMD_Date</sourceName>
+        <destinationName>YMD_Date</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">YMD Date</att>
+            <att name="standard_name">time</att>
+            <att name="time_precision">1970-01-01</att>
+            <att name="units">yyyy-MM-dd</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>DateTime</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Date Time</att>
+            <att name="source_name">DateTime</att>
+            <att name="standard_name">time</att>
+            <att name="time_precision">1970-01-01T00:00:00Z</att>
+            <att name="units">yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Unix_Timestamp</sourceName>
+        <destinationName>Unix_Timestamp</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Unix Timestamp</att>
         </addAttributes>
     </dataVariable>
 </dataset>
