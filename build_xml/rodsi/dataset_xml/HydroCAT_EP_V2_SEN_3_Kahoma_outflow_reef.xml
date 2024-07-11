@@ -10,11 +10,11 @@
     <metadataFrom>last</metadataFrom>
     <standardizeWhat>0</standardizeWhat>
     <charset>ISO-8859-1</charset>
-    <columnSeparator></columnSeparator>
+    <columnSeparator>,</columnSeparator>
     <columnNamesRow>1</columnNamesRow>
     <firstDataRow>2</firstDataRow>
-    <sortedColumnSourceName>&#39;&#39;</sortedColumnSourceName>
-    <sortFilesBySourceNames>&#39;&#39;</sortFilesBySourceNames>
+    <sortedColumnSourceName>Unix_Timestamp</sortedColumnSourceName>
+    <sortFilesBySourceNames>Unix_Timestamp</sortFilesBySourceNames>
     <fileTableInMemory>false</fileTableInMemory>
     <!-- sourceAttributes>
     </sourceAttributes -->
@@ -25,10 +25,10 @@
     <addAttributes>
         <att name="cdm_data_type">Other</att>
         <att name="Conventions">COARDS, CF-1.10, ACDD-1.3</att>
-        <att name="creator_name">University of Hawaii Manoa</att>
+        <att name="creator_name">University of Hawaii at Manoa</att>
         <att name="creator_type">institution</att>
         <att name="infoUrl">???</att>
-        <att name="institution">University of Hawaii Manoa</att>
+        <att name="institution">University of Hawaii at Manoa</att>
         <att name="keywords">celsius, chemistry, chlorophyll, Chlorophyll_StdDev, color, concentration, concentration_of_chlorophyll_in_sea_water, conductivity, data, date, decibar, density, depth, dev, dissolved, dissolved o2, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Chlorophyll, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, electrical, event, Event_Flags, fires, flags, frame, FrameSync, hawaii, hydrocat, manoa, maui, mg/l, nephelometric, ntu, O2, ocean, ocean color, oceans, oxygen, Oxygen_Sat, percent, practical, pressure, profiler, quality, response, salinity, salinity-temperature-depth, sat, science, sea, sea_water_electrical_conductivity, sea_water_practical_salinity, seawater, sen, Spec_Conductivity, station, statistics, std, sync, temperature, time, time2, timestamp, turbidity, Turbidity_StdDev, ug/l, units, university, unix, Unix_Timestamp, utc-10, water, ymd, YMD_Date</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">[standard]</att>
