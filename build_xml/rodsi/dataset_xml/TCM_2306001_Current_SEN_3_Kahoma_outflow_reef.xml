@@ -1,0 +1,96 @@
+<dataset type="EDDTableFromAsciiFiles" datasetID="TCM_2306001_Current_SEN_3_Kahoma_outflow_reef" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/maui_fires/tilt_current_meters/</fileDir>
+    <fileNameRegex>TCM_2306001_Current_SEN_3_Kahoma_outflow_reef\.csv</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <charset>ISO-8859-1</charset>
+    <columnSeparator></columnSeparator>
+    <columnNamesRow>1</columnNamesRow>
+    <firstDataRow>2</firstDataRow>
+    <sortedColumnSourceName></sortedColumnSourceName>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="cdm_data_type">Other</att>
+        <att name="Conventions">COARDS, CF-1.10, ACDD-1.3</att>
+        <att name="creator_name">University of Hawaii at Manoa</att>
+        <att name="creator_type">institution</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">University of Hawaii at Manoa</att>
+        <att name="keywords">cm/s, current, currents, data, degrees, fires, hawaii, heading, iso, manoa, maui, meter, response, sen, speed, station, time, university, velocity, velocity-e, velocity-n, Velocity_E, Velocity_N</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="summary">Maui Fires Response - current meter data from station SEN_3</att>
+        <att name="title">Maui Fires Response, current meter data from station SEN_3</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>ISO 8601 Time</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">ISO 8601 Time</att>
+            <att name="source_name">ISO 8601 Time</att>
+            <att name="standard_name">time</att>
+            <att name="time_precision">1970-01-01T00:00:00.000Z</att>
+            <att name="units">yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Speed (cm/s)</sourceName>
+        <destinationName>Speed</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Currents</att>
+            <att name="long_name">Speed (cm/s)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Heading (degrees)</sourceName>
+        <destinationName>Heading</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Heading (degrees)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Velocity-N (cm/s)</sourceName>
+        <destinationName>Velocity_N</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Currents</att>
+            <att name="long_name">Velocity-N (cm/s)</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Velocity-E (cm/s)</sourceName>
+        <destinationName>Velocity_E</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Currents</att>
+            <att name="long_name">Velocity-E (cm/s)</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>

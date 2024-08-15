@@ -1,26 +1,26 @@
-<dataset type="EDDTableFromNcFiles" datasetID="CTM_0985_DO_SEN_2_Wahikuli" active="true">
+<dataset type="EDDTableFromNcFiles" datasetID="CTM_1112_CHLA_SEN_1_Olowalu" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
-    <fileDir>/datasets/maui_fires/sea_and_sun/</fileDir>
-    <fileNameRegex>.*CTM_0985_DO_SEN_2_Wahikuli.*\.nc</fileNameRegex>
+    <fileDir>/datasets/maui_fires/sea_and_sun/CTM_1112_CHLA_SEN_1_Olowalu/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
     <recursive>true</recursive>
     <pathRegex>.*</pathRegex>
     <metadataFrom>last</metadataFrom>
     <standardizeWhat>0</standardizeWhat>
-    <sortedColumnSourceName></sortedColumnSourceName>
-    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <sortedColumnSourceName>time</sortedColumnSourceName>
+    <sortFilesBySourceNames>time</sortFilesBySourceNames>
     <fileTableInMemory>false</fileTableInMemory>
     <!-- sourceAttributes>
         <att name="Area">Hawaii_Lahaina</att>
         <att name="Bbox" type="doubleList">-156.610239 -156.610239 20.80955 20.80955</att>
-        <att name="CastID">ARRAY_CTM985_003_ZR</att>
+        <att name="CastID">ARRAY_CTM1112_004_ZR</att>
         <att name="Conventions">CF-1.4</att>
-        <att name="CreationTime">11-Mar-2024 09:21:04</att>
-        <att name="CTDnumber">CTM985</att>
-        <att name="DataSetHistory">{original data}{Timeinterpolation linear secondwise}{Plausibility check for all Variables using METADATA.Limits;}{erased Conductivity=5.1391 near Time=30-Jan-2024 02:12:35}{erased Conductivity between Time=02-Feb-2024 21:22:22 and 02-Feb-2024 21:22:31}{erased Conductivity=5.1987 near Time=05-Feb-2024 05:12:14}</att>
+        <att name="CreationTime">11-Mar-2024 14:40:52</att>
+        <att name="CTDnumber">CTM1112</att>
+        <att name="DataSetHistory">{original data}{Timeinterpolation linear secondwise}{Plausibility check for all Variables using METADATA.Limits;}{erased Conductivity=5.417 near Time=29-Jan-2024 05:12:44}</att>
         <att name="institution">Helmholtz-Zentrum hereon, Institute of Coastal Ocean Dynamics, Geesthacht, Germany</att>
         <att name="Operator">martina.heineke@hereon.de</att>
-        <att name="OriginalFile">{C:\Users\Heineke\heineke\kci_projekte\2023_hawaii01\level2\CTM985\qf0\physdat\TIA_CTM0985_20240126_194215_O2.data}</att>
+        <att name="OriginalFile">{C:\Users\Heineke\heineke\kci_projekte\2023_hawaii01\level2\CTM1112\qf0\physdat\TIA_CTM1112_20240126_194220_CHL.data}</att>
         <att name="Originator">&lt;martina.heineke@hereon.de</att>
         <att name="Platform">Hawaii_2023/01/Array</att>
         <att name="ProfileName">DPL03</att>
@@ -28,10 +28,10 @@
         <att name="source">HZG Institute of Coastal Ocean Dynamics</att>
         <att name="StartLatitude" type="double">20.80955</att>
         <att name="StartLongitude" type="double">-156.610239</att>
-        <att name="StartTime">26-Jan-2024 22:12:15</att>
+        <att name="StartTime">26-Jan-2024 20:32:20</att>
         <att name="StopLatitude" type="double">20.80955</att>
         <att name="StopLongitude" type="double">-156.610239</att>
-        <att name="StopTime">07-Feb-2024 00:32:40</att>
+        <att name="StopTime">01-Feb-2024 18:42:45</att>
         <att name="Survey">2023_hawaii01</att>
         <att name="System">ARRAY</att>
         <att name="TimeOffsDay" type="double">1.0</att>
@@ -51,14 +51,14 @@
         <att name="history">HZG Institute of Coastal Ocean Dynamics</att>
         <att name="infoUrl">???</att>
         <att name="institution">University of Hawaii at Manoa</att>
-        <att name="keywords">battery, chemistry, coastal, concentration, Cond25degreeC, Cond25degreeC_Quality_Flag, conductivity, Conductivity_Quality_Flag, counter, ctd, ctm, CTMserNO, CTMserNO_Quality_Flag, currents, data, degc, density, depth, dissolved, dissolved o2, dynamics, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Oxygen, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Water Temperature, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Potential Density, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, electrical, fires, fractional, fractional_saturation_of_oxygen_in_sea_water, geesthacht, germany, hawaii, helmholtz, helmholtz-zentrum, hereon, institute, latitude, Latitude_Quality_Flag, longitude, Longitude_Quality_Flag, manoa, mass, mass_concentration_of_oxygen_in_sea_water, maui, mooring, number, O2, ocean, oceans, optode, OxyConcSSPT100, OxyConcSSPT100_Quality_Flag, oxygen, OxygenConcSS, OxygenConcSS_Quality_Flag, OxygenRawValueP, OxygenRawValueP_Quality_Flag, OxygenRawValueS, OxygenRawValueS_Quality_Flag, OxygenSatuSS, OxygenSatuSS_Quality_Flag, OxygenVolConcSS, OxygenVolConcSS_Quality_Flag, OxyVolConcSSPT100, OxyVolConcSSPT100_Quality_Flag, potential, practical, pressure, Pressure_Quality_Flag, pt100, quality, raw, recalc, RecNo, RecNo_Quality_Flag, record, record counter, response, s&amp;s, salinity, SalinityPT100, SalinityPT100_Quality_Flag, saturation, science, sea, sea_water_electrical_conductivity, sea_water_electrical_conductivity_at_25_degc, sea_water_potential_density, sea_water_practical_salinity, sea_water_pressure, sea_water_sound_velocity, sea_water_temperature, seawater, sen, serial, SigmaPT100, SigmaPT100_Quality_Flag, sonde, sound, SoundVelocityPT100, SoundVelocityPT100_Quality_Flag, specific, station, statistics, sun, temperature, TemperaturePT100, TemperaturePT100_Quality_Flag, time, time2, time3, Time_Quality_Flag, TimeOrig, TimeOrig_Quality_Flag, university, value, Vbatt, Vbatt_Quality_Flag, velocity, voltage, volume, volume_concentration_of_oxygen_in_sea_water, water, zentrum</att>
+        <att name="keywords">battery, chla, chlorophyll, chlorophyll-a, coastal, color, concentration, Cond25degreeC, Cond25degreeC_Quality_Flag, conductivity, Conductivity_Quality_Flag, counter, ctd, ctm, CTMserNO, CTMserNO_Quality_Flag, currents, data, degc, density, depth, dynamics, earth, Earth Science &gt; Oceans &gt; Ocean Pressure &gt; Water Pressure, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Water Temperature, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Conductivity, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Potential Density, Earth Science &gt; Oceans &gt; Salinity/Density &gt; Salinity, electrical, fires, fluocycl, FluoCycl_Quality_Flag, geesthacht, germany, hawaii, helmholtz, helmholtz-zentrum, hereon, institute, lab, latitude, Latitude_Quality_Flag, longitude, Longitude_Quality_Flag, manoa, mass, mass_concentration_of_chlorophyll_lab_standard_in_sea_water, maui, mooring, number, ocean, ocean color, oceans, potential, practical, pressure, Pressure_Quality_Flag, pt100, quality, RecNo, RecNo_Quality_Flag, record, record counter, response, s&amp;s, salinity, SalinityPT100, SalinityPT100_Quality_Flag, science, sea, sea_water_electrical_conductivity, sea_water_electrical_conductivity_at_25_degc, sea_water_potential_density, sea_water_practical_salinity, sea_water_pressure, sea_water_sound_velocity, sea_water_temperature, seawater, sen, serial, SigmaPT100, SigmaPT100_Quality_Flag, sonde, sound, SoundVelocityPT100, SoundVelocityPT100_Quality_Flag, specific, standard, station, statistics, temperature, TemperaturePT100, TemperaturePT100_Quality_Flag, time, time2, time3, Time_Quality_Flag, TimeOrig, TimeOrig_Quality_Flag, university, Vbatt, Vbatt_Quality_Flag, velocity, voltage, water, zentrum</att>
         <att name="keywords_vocabulary">GCMD Science Keywords</att>
         <att name="license">[standard]</att>
         <att name="sourceUrl">(local files)</att>
         <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
-        <att name="subsetVariables">Time_Quality_Flag, latitude, Latitude_Quality_Flag, longitude, Longitude_Quality_Flag, Pressure_Quality_Flag, TemperaturePT100_Quality_Flag, OxygenRawValueS_Quality_Flag, OxygenRawValueP_Quality_Flag, OxygenSatuSS_Quality_Flag, OxygenVolConcSS_Quality_Flag, OxygenConcSS_Quality_Flag, Cond25degreeC_Quality_Flag, Vbatt_Quality_Flag, CTMserNO, CTMserNO_Quality_Flag, RecNo_Quality_Flag, TimeOrig_Quality_Flag</att>
-        <att name="summary">CTM mooring data. Maui Fires Response - sea and sun data from station SEN_2</att>
-        <att name="title">Maui Fires Response, sea and sun data from station SEN_2 (CTM mooring data)</att>
+        <att name="subsetVariables">Time_Quality_Flag, latitude, Latitude_Quality_Flag, longitude, Longitude_Quality_Flag, Pressure_Quality_Flag, TemperaturePT100_Quality_Flag, Cond25degreeC_Quality_Flag, FluoCycl_Quality_Flag, Vbatt_Quality_Flag, CTMserNO, CTMserNO_Quality_Flag, RecNo_Quality_Flag, TimeOrig_Quality_Flag</att>
+        <att name="summary">CTM mooring data. Maui Fires Response - chlorophyll data from station SEN_1</att>
+        <att name="title">Maui Fires Response, chlorophyll data from station SEN_1 (CTM mooring data)</att>
     </addAttributes>
     <dataVariable>
         <sourceName>time</sourceName>
@@ -309,188 +309,31 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>OxygenRawValueS</sourceName>
-        <destinationName>OxygenRawValueS</destinationName>
+        <sourceName>Cond25degreeC</sourceName>
+        <destinationName>Cond25degreeC</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
-            <att name="internal_name">OxygenRawValueS</att>
-            <att name="long_name">oxygen raw value S_S</att>
+            <att name="internal_name">Cond25degreeC</att>
+            <att name="long_name">specific electrical conductivity SS at 25 degC</att>
             <att name="LowerRangeLimit" type="double">0.0</att>
-            <att name="quality_flag_name">OxygenRawValueS Quality Flag</att>
-            <att name="short_name">OxyrawSS</att>
-            <att name="standard_name">mass_concentration_of_oxygen_in_sea_water</att>
-            <att name="units">hPa</att>
-            <att name="UpperRangeLimit" type="double">250.0</att>
+            <att name="quality_flag_name">Cond25degreeC Quality Flag</att>
+            <att name="short_name">CAP25</att>
+            <att name="standard_name">sea_water_electrical_conductivity_at_25_degC</att>
+            <att name="units">S m-1</att>
+            <att name="UpperRangeLimit" type="double">6.0</att>
         </sourceAttributes -->
         <addAttributes>
-            <att name="colorBarMaximum" type="double">500.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Dissolved O2</att>
+            <att name="ioos_category">Salinity</att>
+            <att name="standard_name">sea_water_electrical_conductivity_at_25_degc</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>OxygenRawValueS_Quality_Flag</sourceName>
-        <destinationName>OxygenRawValueS_Quality_Flag</destinationName>
+        <sourceName>Cond25degreeC_Quality_Flag</sourceName>
+        <destinationName>Cond25degreeC_Quality_Flag</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
             <att name="long_name">N/A</att>
-            <att name="short_name">OxyrawSSQF</att>
-            <att name="standard_name">N/A</att>
-            <att name="units">N/A</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">150.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">null</att>
-            <att name="standard_name">null</att>
-            <att name="units">null</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxygenRawValueP</sourceName>
-        <destinationName>OxygenRawValueP</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="internal_name">OxygenRawValueP</att>
-            <att name="long_name">oxygen raw value S_S</att>
-            <att name="LowerRangeLimit" type="double">0.0</att>
-            <att name="quality_flag_name">OxygenRawValueP Quality Flag</att>
-            <att name="short_name">OxyrawP</att>
-            <att name="standard_name">mass_concentration_of_oxygen_in_sea_water</att>
-            <att name="units">hPa</att>
-            <att name="UpperRangeLimit" type="double">250.0</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">500.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Dissolved O2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxygenRawValueP_Quality_Flag</sourceName>
-        <destinationName>OxygenRawValueP_Quality_Flag</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="long_name">N/A</att>
-            <att name="short_name">OxyrawPQF</att>
-            <att name="standard_name">N/A</att>
-            <att name="units">N/A</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">150.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">null</att>
-            <att name="standard_name">null</att>
-            <att name="units">null</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxygenSatuSS</sourceName>
-        <destinationName>OxygenSatuSS</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="internal_name">OxygenSatuSS</att>
-            <att name="long_name">oxygen saturation Sea_Sun Optode</att>
-            <att name="LowerRangeLimit" type="double">0.0</att>
-            <att name="quality_flag_name">OxygenSatuSS Quality Flag</att>
-            <att name="short_name">OxySatSS</att>
-            <att name="standard_name">fractional_saturation_of_oxygen_in_sea_water</att>
-            <att name="units">1e-2</att>
-            <att name="UpperRangeLimit" type="double">160.0</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">1.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Dissolved O2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxygenSatuSS_Quality_Flag</sourceName>
-        <destinationName>OxygenSatuSS_Quality_Flag</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="long_name">N/A</att>
-            <att name="short_name">OxySatSSQF</att>
-            <att name="standard_name">N/A</att>
-            <att name="units">N/A</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">150.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">null</att>
-            <att name="standard_name">null</att>
-            <att name="units">null</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxygenVolConcSS</sourceName>
-        <destinationName>OxygenVolConcSS</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="internal_name">OxygenVolConcSS</att>
-            <att name="long_name">oxygen volume concentration Sea_Sun Optode</att>
-            <att name="LowerRangeLimit" type="double">0.0</att>
-            <att name="quality_flag_name">OxygenVolConcSS Quality Flag</att>
-            <att name="short_name">OxyVolConS</att>
-            <att name="standard_name">volume_concentration_of_oxygen_in_sea_water</att>
-            <att name="units">1e-3 m3 m-3</att>
-            <att name="UpperRangeLimit" type="double">0.05</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">500.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Dissolved O2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxygenVolConcSS_Quality_Flag</sourceName>
-        <destinationName>OxygenVolConcSS_Quality_Flag</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="long_name">N/A</att>
-            <att name="short_name">OxyVolConSQF</att>
-            <att name="standard_name">N/A</att>
-            <att name="units">N/A</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">150.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">null</att>
-            <att name="standard_name">null</att>
-            <att name="units">null</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxygenConcSS</sourceName>
-        <destinationName>OxygenConcSS</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="internal_name">OxygenConcSS</att>
-            <att name="long_name">oxygen mass concentration Sea_Sun Optode</att>
-            <att name="LowerRangeLimit" type="double">0.0</att>
-            <att name="quality_flag_name">OxygenConcSS Quality Flag</att>
-            <att name="short_name">OxyConS</att>
-            <att name="standard_name">mass_concentration_of_oxygen_in_sea_water</att>
-            <att name="units">kg m-3</att>
-            <att name="UpperRangeLimit" type="double">50.0</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">500.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Dissolved O2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxygenConcSS_Quality_Flag</sourceName>
-        <destinationName>OxygenConcSS_Quality_Flag</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="long_name">N/A</att>
-            <att name="short_name">OxyConSQF</att>
+            <att name="short_name">CAP25QF</att>
             <att name="standard_name">N/A</att>
             <att name="units">N/A</att>
         </sourceAttributes -->
@@ -584,31 +427,30 @@
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>Cond25degreeC</sourceName>
-        <destinationName>Cond25degreeC</destinationName>
+        <sourceName>FluoCycl</sourceName>
+        <destinationName>FluoCycl</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
-            <att name="internal_name">Cond25degreeC</att>
-            <att name="long_name">specific electrical conductivity SS at 25 degC</att>
-            <att name="LowerRangeLimit" type="double">0.0</att>
-            <att name="quality_flag_name">Cond25degreeC Quality Flag</att>
-            <att name="short_name">CAP25</att>
-            <att name="standard_name">sea_water_electrical_conductivity_at_25_degC</att>
-            <att name="units">S m-1</att>
-            <att name="UpperRangeLimit" type="double">6.0</att>
+            <att name="internal_name">FluoCycl</att>
+            <att name="long_name">fluoCycl SS_in Chla_lab_standard</att>
+            <att name="LowerRangeLimit" type="double">-3.0</att>
+            <att name="quality_flag_name">FluoCycl Quality Flag</att>
+            <att name="short_name">FluoCycl</att>
+            <att name="standard_name">mass_concentration_of_chlorophyll_lab_standard_in_sea_water</att>
+            <att name="units">1e-6 kg m-3</att>
+            <att name="UpperRangeLimit" type="double">200.0</att>
         </sourceAttributes -->
         <addAttributes>
-            <att name="ioos_category">Salinity</att>
-            <att name="standard_name">sea_water_electrical_conductivity_at_25_degc</att>
+            <att name="ioos_category">Ocean Color</att>
         </addAttributes>
     </dataVariable>
     <dataVariable>
-        <sourceName>Cond25degreeC_Quality_Flag</sourceName>
-        <destinationName>Cond25degreeC_Quality_Flag</destinationName>
+        <sourceName>FluoCycl_Quality_Flag</sourceName>
+        <destinationName>FluoCycl_Quality_Flag</destinationName>
         <dataType>double</dataType>
         <!-- sourceAttributes>
             <att name="long_name">N/A</att>
-            <att name="short_name">CAP25QF</att>
+            <att name="short_name">FluoCyclQF</att>
             <att name="standard_name">N/A</att>
             <att name="units">N/A</att>
         </sourceAttributes -->
@@ -800,84 +642,6 @@
         <!-- sourceAttributes>
             <att name="long_name">N/A</att>
             <att name="short_name">TimeQF</att>
-            <att name="standard_name">N/A</att>
-            <att name="units">N/A</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">150.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">null</att>
-            <att name="standard_name">null</att>
-            <att name="units">null</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxyConcSSPT100</sourceName>
-        <destinationName>OxyConcSSPT100</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="internal_name">OxyConcSSPT100</att>
-            <att name="long_name">oxygen mass concentration Sea_Sun Optode PT100 recalc</att>
-            <att name="LowerRangeLimit" type="double">-Infinity</att>
-            <att name="quality_flag_name">OxyConcSSPT100 Quality Flag</att>
-            <att name="short_name">OxyConSPT</att>
-            <att name="standard_name">mass_concentration_of_oxygen_in_sea_water</att>
-            <att name="units">kg m-3</att>
-            <att name="UpperRangeLimit" type="double">Infinity</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">500.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Dissolved O2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxyConcSSPT100_Quality_Flag</sourceName>
-        <destinationName>OxyConcSSPT100_Quality_Flag</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="long_name">N/A</att>
-            <att name="short_name">OxyConSPTQF</att>
-            <att name="standard_name">N/A</att>
-            <att name="units">N/A</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">150.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Quality</att>
-            <att name="long_name">null</att>
-            <att name="standard_name">null</att>
-            <att name="units">null</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxyVolConcSSPT100</sourceName>
-        <destinationName>OxyVolConcSSPT100</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="internal_name">OxyVolConcSSPT100</att>
-            <att name="long_name">oxygen volume concentration Sea_Sun Optode PT100 recalc</att>
-            <att name="LowerRangeLimit" type="double">-Infinity</att>
-            <att name="quality_flag_name">OxyVolConcSSPT100 Quality Flag</att>
-            <att name="short_name">OxyVolConSPT</att>
-            <att name="standard_name">volume_concentration_of_oxygen_in_sea_water</att>
-            <att name="units">1e-3 m3 m-3</att>
-            <att name="UpperRangeLimit" type="double">Infinity</att>
-        </sourceAttributes -->
-        <addAttributes>
-            <att name="colorBarMaximum" type="double">500.0</att>
-            <att name="colorBarMinimum" type="double">0.0</att>
-            <att name="ioos_category">Dissolved O2</att>
-        </addAttributes>
-    </dataVariable>
-    <dataVariable>
-        <sourceName>OxyVolConcSSPT100_Quality_Flag</sourceName>
-        <destinationName>OxyVolConcSSPT100_Quality_Flag</destinationName>
-        <dataType>double</dataType>
-        <!-- sourceAttributes>
-            <att name="long_name">N/A</att>
-            <att name="short_name">OxyVolConSPTQF</att>
             <att name="standard_name">N/A</att>
             <att name="units">N/A</att>
         </sourceAttributes -->
