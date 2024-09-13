@@ -3844,6 +3844,1223 @@ Data are collected and analyzed every two or three weeks for physical and chemic
             <dataType>String</dataType>
         </dataVariable>
     </dataset>
+<dataset type="EDDTableFromAsciiFiles" datasetID="lahaina_chlorophyll_samples" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/maui_fires/samples/</fileDir>
+    <fileNameRegex>lahaina_chlorophyll_events\.csv</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <charset>ISO-8859-1</charset>
+    <columnSeparator></columnSeparator>
+    <columnNamesRow>1</columnNamesRow>
+    <firstDataRow>2</firstDataRow>
+    <sortedColumnSourceName>HST</sortedColumnSourceName>
+    <sortFilesBySourceNames>HST</sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="cdm_data_type">Point</att>
+        <att name="Conventions">COARDS, CF-1.10, ACDD-1.3</att>
+        <att name="creator_name">University of Hawaii at Manoa</att>
+        <att name="creator_type">institution</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">University of Hawaii at Manoa</att>
+        <att name="keywords">chlorophyll, data, fires, hawaii, hst, identifier, latitude, longitude, manoa, maui, response, sample, SAMPLE_ID, samples, sensor, site, time, university, unix, value</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="summary">Maui Fires Response - chlorophyll samples</att>
+        <att name="title">Maui Fires Response, chlorophyll samples</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>SAMPLE ID</sourceName>
+        <destinationName>SAMPLE_ID</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">SAMPLE ID</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SAMPLE</sourceName>
+        <destinationName>SAMPLE</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">SAMPLE</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SITE</sourceName>
+        <destinationName>SITE</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">SITE</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SENSOR</sourceName>
+        <destinationName>SENSOR</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">SENSOR</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>LAT</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>LONG</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Longitude</att>
+            <att name="source_name">LONG</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>HST</sourceName>
+        <destinationName>time</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">HST</att>
+            <att name="source_name">HST</att>
+            <att name="standard_name">time</att>
+            <att name="time_precision">1970-01-01T00:00Z</att>
+            <att name="units">M/d/yyyy H:m</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>VALUE</sourceName>
+        <destinationName>VALUE</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">VALUE</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>UNIX</sourceName>
+        <destinationName>UNIX</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">UNIX</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
+<dataset type="EDDTableFromAsciiFiles" datasetID="lahaina_shore_sampling_data" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/maui_fires/samples/</fileDir>
+    <fileNameRegex>shore_sampling_data_20240830\.csv</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <charset>ISO-8859-1</charset>
+    <columnSeparator></columnSeparator>
+    <columnNamesRow>1</columnNamesRow>
+    <firstDataRow>2</firstDataRow>
+    <sortedColumnSourceName></sortedColumnSourceName>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="cdm_data_type">Other</att>
+        <att name="Conventions">COARDS, CF-1.10, ACDD-1.3</att>
+        <att name="creator_name">University of Hawaii at Manoa</att>
+        <att name="creator_type">institution</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">University of Hawaii at Manoa</att>
+        <att name="keywords">Ag_ppb_F, Ag_ppb_UF, Al_ppb_F, Al_ppb_UF, all, As_ppb_F, As_ppb_UF, Ba_ppb_F, Ba_ppb_UF, bact, bix, category, Cd_ppb_F, Cd_ppb_UF, chemistry, Co_ppb_F, Co_ppb_UF, coble, CobleA, CobleB, CobleC, CobleM, CobleT, collection, comments, commerce, concentration, Cr_ppb_F, Cr_ppb_UF, Cu_ppb_F, Cu_ppb_UF, data, date, date_description, department, description, dic, dissolved, dissolved nutrients, doc, earth, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Nitrate, Earth Science &gt; Oceans &gt; Ocean Chemistry &gt; Phosphate, empirical, euk, events, fcm, fcm_all_events_per_ul, fdom, Fe_ppb_F, Fe_ppb_UF, fires, full, hawaii, hawco, Hawco_full_collection_F, Hawco_full_collection_UF, Hawco_run_F, Hawco_run_UF, hetero, hetero_bact_per_ul, hix, hlb, identifier, jp5, JP5_empirical, latitude, lignin, longitude, M_to_C, manoa, mass, mass_concentration_of_phosphate_in_sea_water, maui, metal, Mn_ppb_F, Mn_ppb_UF, Mo_ppb_F, Mo_ppb_UF, mole, mole_concentration_of_nitrate_in_sea_water, mole_concentration_of_nitrite_in_sea_water, n02, nh3, NH3_umolL, Ni_ppb_F, Ni_ppb_UF, nitrate, nitrite, NO2_umolL, no3, NO3_NO2_umolL, nutrients, O2, ocean, oceanography, oceans, oxygen, Pb_ppb_F, Pb_ppb_UF, per, phosphate, physical, physical oceanography, pico, pico_euk_per_ul, platform, po4, PO4_umolL, ppb, pro, pro_per_ul, response, run, sample, sampling, sampling_trip, Sb_ppb_F, Sb_ppb_UF, science, Se_ppb_F, Se_ppb_UF, sea, seawater, sediment, SiO2_umolL, station, station_category, station_platform, stedmon, Stedmon_D, syn, syn_per_ul, Ti_ppb_F, Ti_ppb_UF, time, time2, Tl_ppb_F, Tl_ppb_UF, trip, trip_description, umol, unique, uniqueID, university, v, V_ppb_F, V_ppb_UF, water, Zn_ppb_F, Zn_ppb_UF</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="summary">Maui Fires Response - sample data</att>
+        <att name="title">Maui Fires Response, sample data</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>collection</sourceName>
+        <destinationName>collection</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Collection</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>uniqueID</sourceName>
+        <destinationName>uniqueID</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Unique ID</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>station</sourceName>
+        <destinationName>station</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Identifier</att>
+            <att name="long_name">Station</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>sampling_trip</sourceName>
+        <destinationName>sampling_trip</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Sampling Trip</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>date</sourceName>
+        <destinationName>date</destinationName>
+        <dataType>int</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="int">2147483647</att>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Date</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time2</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Time</att>
+            <att name="standard_name">time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>description</sourceName>
+        <destinationName>description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>station_platform</sourceName>
+        <destinationName>station_platform</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Station Platform</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>station_category</sourceName>
+        <destinationName>station_category</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Station Category</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lat</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lon</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>metal</sourceName>
+        <destinationName>metal</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Metal</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fcm</sourceName>
+        <destinationName>fcm</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">FCM</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fdom</sourceName>
+        <destinationName>fdom</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Fdom</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>hlb</sourceName>
+        <destinationName>hlb</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">HLB</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>doc</sourceName>
+        <destinationName>doc</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Doc</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>nutrients</sourceName>
+        <destinationName>nutrients</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Nutrients</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>dic</sourceName>
+        <destinationName>dic</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Dic</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>sediment</sourceName>
+        <destinationName>sediment</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Physical Oceanography</att>
+            <att name="long_name">Sediment</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>comments</sourceName>
+        <destinationName>comments</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Comments</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>trip_description</sourceName>
+        <destinationName>trip_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Trip Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>date_description</sourceName>
+        <destinationName>date_description</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Date Description</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>NO3_NO2_umolL</sourceName>
+        <destinationName>NO3_NO2_umolL</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="colorBarMaximum" type="double">50.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Dissolved Nutrients</att>
+            <att name="long_name">Mole Concentration Of Nitrate In Sea Water</att>
+            <att name="standard_name">mole_concentration_of_nitrate_in_sea_water</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>NO2_umolL</sourceName>
+        <destinationName>NO2_umolL</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="colorBarMaximum" type="double">1.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="ioos_category">Dissolved Nutrients</att>
+            <att name="long_name">Mole Concentration Of Nitrite In Sea Water</att>
+            <att name="standard_name">mole_concentration_of_nitrite_in_sea_water</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>SiO2_umolL</sourceName>
+        <destinationName>SiO2_umolL</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Dissolved Nutrients</att>
+            <att name="long_name">Si O2 Umol L</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>PO4_umolL</sourceName>
+        <destinationName>PO4_umolL</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Dissolved Nutrients</att>
+            <att name="long_name">Mass Concentration Of Phosphate In Sea Water</att>
+            <att name="standard_name">mass_concentration_of_phosphate_in_sea_water</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>NH3_umolL</sourceName>
+        <destinationName>NH3_umolL</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Dissolved Nutrients</att>
+            <att name="long_name">NH3 Umol L</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ag_ppb_F</sourceName>
+        <destinationName>Ag_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ag Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ag_ppb_UF</sourceName>
+        <destinationName>Ag_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ag Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Al_ppb_F</sourceName>
+        <destinationName>Al_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Al Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Al_ppb_UF</sourceName>
+        <destinationName>Al_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Al Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>As_ppb_F</sourceName>
+        <destinationName>As_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">As Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>As_ppb_UF</sourceName>
+        <destinationName>As_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">As Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ba_ppb_F</sourceName>
+        <destinationName>Ba_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ba Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ba_ppb_UF</sourceName>
+        <destinationName>Ba_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ba Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Cd_ppb_F</sourceName>
+        <destinationName>Cd_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">CD PPB F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Cd_ppb_UF</sourceName>
+        <destinationName>Cd_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Cd Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Co_ppb_F</sourceName>
+        <destinationName>Co_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Co Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Co_ppb_UF</sourceName>
+        <destinationName>Co_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Co Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Cr_ppb_F</sourceName>
+        <destinationName>Cr_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">CR PPB F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Cr_ppb_UF</sourceName>
+        <destinationName>Cr_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Cr Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Cu_ppb_F</sourceName>
+        <destinationName>Cu_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Cu Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Cu_ppb_UF</sourceName>
+        <destinationName>Cu_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Cu Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Fe_ppb_F</sourceName>
+        <destinationName>Fe_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Fe Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Fe_ppb_UF</sourceName>
+        <destinationName>Fe_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Fe Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Hawco_full_collection_F</sourceName>
+        <destinationName>Hawco_full_collection_F</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Hawco Full Collection F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Hawco_full_collection_UF</sourceName>
+        <destinationName>Hawco_full_collection_UF</destinationName>
+        <dataType>String</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Hawco Full Collection UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Hawco_run_F</sourceName>
+        <destinationName>Hawco_run_F</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Hawco Run F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Hawco_run_UF</sourceName>
+        <destinationName>Hawco_run_UF</destinationName>
+        <dataType>byte</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="byte">127</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Hawco Run UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Mn_ppb_F</sourceName>
+        <destinationName>Mn_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">MN PPB F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Mn_ppb_UF</sourceName>
+        <destinationName>Mn_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Mn Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Mo_ppb_F</sourceName>
+        <destinationName>Mo_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Mo Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Mo_ppb_UF</sourceName>
+        <destinationName>Mo_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Mo Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ni_ppb_F</sourceName>
+        <destinationName>Ni_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ni Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ni_ppb_UF</sourceName>
+        <destinationName>Ni_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ni Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Pb_ppb_F</sourceName>
+        <destinationName>Pb_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">PB PPB F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Pb_ppb_UF</sourceName>
+        <destinationName>Pb_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Pb Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Sb_ppb_F</sourceName>
+        <destinationName>Sb_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">SB PPB F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Sb_ppb_UF</sourceName>
+        <destinationName>Sb_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Sb Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Se_ppb_F</sourceName>
+        <destinationName>Se_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Se Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Se_ppb_UF</sourceName>
+        <destinationName>Se_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Se Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ti_ppb_F</sourceName>
+        <destinationName>Ti_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ti Ppb F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Ti_ppb_UF</sourceName>
+        <destinationName>Ti_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Ti Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Tl_ppb_F</sourceName>
+        <destinationName>Tl_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">TL PPB F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Tl_ppb_UF</sourceName>
+        <destinationName>Tl_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Tl Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>V_ppb_F</sourceName>
+        <destinationName>V_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">V PPB F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>V_ppb_UF</sourceName>
+        <destinationName>V_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">V Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Zn_ppb_F</sourceName>
+        <destinationName>Zn_ppb_F</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">ZN PPB F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Zn_ppb_UF</sourceName>
+        <destinationName>Zn_ppb_UF</destinationName>
+        <dataType>float</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="float">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Zn Ppb UF</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CobleA</sourceName>
+        <destinationName>CobleA</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Coble A</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CobleB</sourceName>
+        <destinationName>CobleB</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Coble B</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CobleC</sourceName>
+        <destinationName>CobleC</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Coble C</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CobleM</sourceName>
+        <destinationName>CobleM</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Coble M</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>CobleT</sourceName>
+        <destinationName>CobleT</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Coble T</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Stedmon_D</sourceName>
+        <destinationName>Stedmon_D</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Stedmon D</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>BIX</sourceName>
+        <destinationName>BIX</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">BIX</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>HIX</sourceName>
+        <destinationName>HIX</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">HIX</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>FI</sourceName>
+        <destinationName>FI</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">FI</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>M_to_C</sourceName>
+        <destinationName>M_to_C</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">M To C</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Lignin</sourceName>
+        <destinationName>Lignin</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Lignin</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>JP5_empirical</sourceName>
+        <destinationName>JP5_empirical</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">JP5 Empirical</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>hetero_bact_per_ul</sourceName>
+        <destinationName>hetero_bact_per_ul</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Hetero Bact Per Ul</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pro_per_ul</sourceName>
+        <destinationName>pro_per_ul</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Pro Per Ul</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>syn_per_ul</sourceName>
+        <destinationName>syn_per_ul</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Syn Per Ul</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>pico_euk_per_ul</sourceName>
+        <destinationName>pico_euk_per_ul</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Pico Euk Per Ul</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>fcm_all_events_per_ul</sourceName>
+        <destinationName>fcm_all_events_per_ul</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Fcm All Events Per Ul</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
 <dataset type="EDDTableFromAsciiFiles" datasetID="minidot_001342_SEN_1_Olowalu" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
