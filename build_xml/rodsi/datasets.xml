@@ -2121,6 +2121,670 @@
         </addAttributes>
     </dataVariable>
 </dataset>
+<dataset type="EDDTableFromNcFiles" datasetID="Ngerkebesang_30fd_1e43_f15d" active="true">
+    <reloadEveryNMinutes>10080</reloadEveryNMinutes>
+    <updateEveryNMillis>10000</updateEveryNMillis>
+    <fileDir>/datasets/palau/Ngerkebesang/</fileDir>
+    <fileNameRegex>.*\.nc</fileNameRegex>
+    <recursive>true</recursive>
+    <pathRegex>.*</pathRegex>
+    <metadataFrom>last</metadataFrom>
+    <standardizeWhat>0</standardizeWhat>
+    <sortedColumnSourceName></sortedColumnSourceName>
+    <sortFilesBySourceNames></sortFilesBySourceNames>
+    <fileTableInMemory>false</fileTableInMemory>
+    <!-- sourceAttributes>
+        <att name="_NCProperties">version=2,netcdf=4.9.3-development,hdf5=1.12.2</att>
+    </sourceAttributes -->
+    <!-- Please specify the actual cdm_data_type (TimeSeries?) and related info below, for example...
+        <att name="cdm_timeseries_variables">station_id, longitude, latitude</att>
+        <att name="subsetVariables">station_id, longitude, latitude</att>
+    -->
+    <addAttributes>
+        <att name="_NCProperties">null</att>
+        <att name="cdm_data_type">Other</att>
+        <att name="Conventions">COARDS, CF-1.10, ACDD-1.3</att>
+        <att name="creator_name">Palua Community College</att>
+        <att name="infoUrl">???</att>
+        <att name="institution">Palua Community College</att>
+        <att name="keywords">activity, agriculture, air, air_pressure, air_temperature, altitude, atmosphere, atmospheric, Atmospheric_Pressure, axis, battery, Battery_Percent, Battery_Voltage, college, community, content, data, direction, distance, earth, Earth Science &gt; Agriculture &gt; Soils &gt; Soil Temperature, Earth Science &gt; Atmosphere &gt; Altitude &gt; Station Height, Earth Science &gt; Atmosphere &gt; Atmospheric Pressure &gt; Atmospheric Pressure Measurements, Earth Science &gt; Atmosphere &gt; Atmospheric Pressure &gt; Sea Level Pressure, Earth Science &gt; Atmosphere &gt; Atmospheric Pressure &gt; Static Pressure, Earth Science &gt; Atmosphere &gt; Atmospheric Temperature &gt; Air Temperature, Earth Science &gt; Atmosphere &gt; Atmospheric Temperature &gt; Surface Air Temperature, Earth Science &gt; Atmosphere &gt; Atmospheric Winds &gt; Surface Winds, Earth Science &gt; Atmosphere &gt; Precipitation &gt; Liquid Water Equivalent, Earth Science &gt; Atmosphere &gt; Precipitation &gt; Precipitation Rate, Earth Science &gt; Land Surface &gt; Soils &gt; Soil Temperature, Earth Science &gt; Oceans &gt; Ocean Temperature &gt; Water Temperature, equivalent, extract, gust, Gust_Speed, height, land, latitude, level, lightning, Lightning_Activity, Lightning_Distance, liquid, logger, Logger_Temperature, longitude, lwe, lwe_precipitation_rate, matric, Matric_Potential, Max_Precip_Rate, measurements, meteorology, ngerkebesang, ocean, oceans, palau, palua, percent, potential, precipitation, pressure, radiation, rain, rainfall, rate, reference, Reference_Pressure, RH_Sensor_Temp, saturation, Saturation_Extract_EC, science, sea, sea level, sea_water_temperature, seawater, sensor, soil, soil_temperature, soils, solar, Solar_Radiation, speed, static, station, stations, surface, temperature, time, time2, vapor, Vapor_Pressure, voltage, vpd, water, Water_Content, Water_Level, Water_Temperature, weather, wind, Wind_Direction, wind_from_direction, wind_speed, wind_speed_of_gust, winds, x-axis, X_axis_Level, y-axis, Y_axis_Level</att>
+        <att name="keywords_vocabulary">GCMD Science Keywords</att>
+        <att name="license">[standard]</att>
+        <att name="sourceUrl">(local files)</att>
+        <att name="standard_name_vocabulary">CF Standard Name Table v70</att>
+        <att name="subsetVariables">EC, Matric_Potential, Water_Temperature, Lightning_Distance, Lightning_Activity, latitude, longitude, altitude</att>
+        <att name="summary">Palau Weather Stations - Ngerkebesang Station</att>
+        <att name="title">Palau Weather Stations, Ngerkebesang Station</att>
+    </addAttributes>
+    <dataVariable>
+        <sourceName>time</sourceName>
+        <destinationName>time2</destinationName>
+        <dataType>long</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="long">9223372036854775807</att>
+            <att name="ioos_category">Time</att>
+            <att name="long_name">Time</att>
+            <att name="standard_name">time</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>EC</sourceName>
+        <destinationName>EC</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">3</att>
+            <att name="precision" type="long">3</att>
+            <att name="sensor_name">HYDROS 21</att>
+            <att name="sensor_sn">H21G200002414</att>
+            <att name="sub_sensor_index" type="long">2</att>
+            <att name="units"> mS/cm</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">EC</att>
+            <att name="units">mS/cm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Reference_Pressure</sourceName>
+        <destinationName>Reference_Pressure</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">8</att>
+            <att name="precision" type="long">2</att>
+            <att name="sensor_name">Barometer</att>
+            <att name="sensor_sn">1695311030</att>
+            <att name="sub_sensor_index" type="long">0</att>
+            <att name="units"> kPa</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Pressure</att>
+            <att name="long_name">Reference Pressure</att>
+            <att name="units">kPa</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Battery_Percent</sourceName>
+        <destinationName>Battery_Percent</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">7</att>
+            <att name="precision" type="long">0</att>
+            <att name="sensor_name">Battery</att>
+            <att name="sub_sensor_index" type="long">0</att>
+            <att name="units">&#37;</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">100.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Battery Percent</att>
+            <att name="units">percent</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Precipitation</sourceName>
+        <destinationName>Precipitation</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">3</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">1</att>
+            <att name="units"> mm</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Meteorology</att>
+            <att name="long_name">Precipitation</att>
+            <att name="units">mm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Battery_Voltage</sourceName>
+        <destinationName>Battery_Voltage</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">7</att>
+            <att name="precision" type="long">0</att>
+            <att name="sensor_name">Battery</att>
+            <att name="sub_sensor_index" type="long">1</att>
+            <att name="units"> mV</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Battery Voltage</att>
+            <att name="units">mV</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Logger_Temperature</sourceName>
+        <destinationName>Logger_Temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">8</att>
+            <att name="precision" type="long">1</att>
+            <att name="sensor_name">Barometer</att>
+            <att name="sensor_sn">1695311030</att>
+            <att name="sub_sensor_index" type="long">1</att>
+            <att name="units"> °F</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">104.0</att>
+            <att name="colorBarMinimum" type="double">14.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Logger Temperature</att>
+            <att name="units">°F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>RH_Sensor_Temp</sourceName>
+        <destinationName>RH_Sensor_Temp</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">1</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">13</att>
+            <att name="units"> °F</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">104.0</att>
+            <att name="colorBarMinimum" type="double">14.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">RH Sensor Temp</att>
+            <att name="units">°F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Water_Level</sourceName>
+        <destinationName>Water_Level</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">3</att>
+            <att name="precision" type="long">0</att>
+            <att name="sensor_name">HYDROS 21</att>
+            <att name="sensor_sn">H21G200002414</att>
+            <att name="sub_sensor_index" type="long">0</att>
+            <att name="units"> mm</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Sea Level</att>
+            <att name="long_name">Water Level</att>
+            <att name="units">mm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Saturation_Extract_EC</sourceName>
+        <destinationName>Saturation_Extract_EC</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">2</att>
+            <att name="precision" type="long">3</att>
+            <att name="sensor_name">TEROS 12</att>
+            <att name="sensor_sn">T12-00145628</att>
+            <att name="sub_sensor_index" type="long">2</att>
+            <att name="units"> mS/cm</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Saturation Extract EC</att>
+            <att name="units">mS/cm</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Soil_Temperature</sourceName>
+        <destinationName>Soil_Temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">4</att>
+            <att name="precision" type="long">1</att>
+            <att name="sensor_name">TEROS 21</att>
+            <att name="sensor_sn">T21G20023933</att>
+            <att name="sub_sensor_index" type="long">1</att>
+            <att name="units"> °F</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">104.0</att>
+            <att name="colorBarMinimum" type="double">14.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Soil Temperature</att>
+            <att name="standard_name">soil_temperature</att>
+            <att name="units">°F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Matric_Potential</sourceName>
+        <destinationName>Matric_Potential</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">4</att>
+            <att name="precision" type="long">1</att>
+            <att name="sensor_name">TEROS 21</att>
+            <att name="sensor_sn">T21G20023933</att>
+            <att name="sub_sensor_index" type="long">0</att>
+            <att name="units"> kPa</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Matric Potential</att>
+            <att name="units">kPa</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Water_Temperature</sourceName>
+        <destinationName>Water_Temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">3</att>
+            <att name="precision" type="long">1</att>
+            <att name="sensor_name">HYDROS 21</att>
+            <att name="sensor_sn">H21G200002414</att>
+            <att name="sub_sensor_index" type="long">1</att>
+            <att name="units"> °F</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">89.0</att>
+            <att name="colorBarMinimum" type="double">32.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Sea Water Temperature</att>
+            <att name="standard_name">sea_water_temperature</att>
+            <att name="units">°F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Water_Content</sourceName>
+        <destinationName>Water_Content</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">2</att>
+            <att name="precision" type="long">3</att>
+            <att name="sensor_name">TEROS 12</att>
+            <att name="sensor_sn">T12-00145628</att>
+            <att name="sub_sensor_index" type="long">0</att>
+            <att name="units"> m³/m³</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Water Content</att>
+            <att name="units">m³/m³</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Air_Temperature</sourceName>
+        <destinationName>Air_Temperature</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">1</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">7</att>
+            <att name="units"> °F</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">104.0</att>
+            <att name="colorBarMinimum" type="double">14.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Temperature</att>
+            <att name="long_name">Air Temperature</att>
+            <att name="standard_name">air_temperature</att>
+            <att name="units">°F</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Wind_Speed</sourceName>
+        <destinationName>Wind_Speed</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">2</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">5</att>
+            <att name="units"> m/s</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">15.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Wind</att>
+            <att name="long_name">Wind Speed</att>
+            <att name="standard_name">wind_speed</att>
+            <att name="units">m/s</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>X-axis_Level</sourceName>
+        <destinationName>X_axis_Level</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">1</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">10</att>
+            <att name="units">°</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">X-axis Level</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Lightning_Distance</sourceName>
+        <destinationName>Lightning_Distance</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">0</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">3</att>
+            <att name="units"> km</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Lightning Distance</att>
+            <att name="units">km</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Max_Precip_Rate</sourceName>
+        <destinationName>Max_Precip_Rate</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">1</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">12</att>
+            <att name="units"> mm/h</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">1.0E-4</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Meteorology</att>
+            <att name="long_name">Lwe Precipitation Rate</att>
+            <att name="standard_name">lwe_precipitation_rate</att>
+            <att name="units">MM/H</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Y-axis_Level</sourceName>
+        <destinationName>Y_axis_Level</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">1</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">11</att>
+            <att name="units">°</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Y-axis Level</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Vapor_Pressure</sourceName>
+        <destinationName>Vapor_Pressure</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">3</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">8</att>
+            <att name="units"> kPa</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Pressure</att>
+            <att name="long_name">Vapor Pressure</att>
+            <att name="units">kPa</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Wind_Direction</sourceName>
+        <destinationName>Wind_Direction</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">0</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">4</att>
+            <att name="units">°</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">360.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Wind</att>
+            <att name="long_name">Wind From Direction</att>
+            <att name="standard_name">wind_from_direction</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>VPD</sourceName>
+        <destinationName>VPD</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">2</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">14</att>
+            <att name="units"> kPa</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">VPD</att>
+            <att name="units">kPa</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Lightning_Activity</sourceName>
+        <destinationName>Lightning_Activity</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">0</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">2</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Lightning Activity</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Atmospheric_Pressure</sourceName>
+        <destinationName>Atmospheric_Pressure</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">2</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">9</att>
+            <att name="units"> kPa</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">1050.0</att>
+            <att name="colorBarMinimum" type="double">950.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Pressure</att>
+            <att name="long_name">Air Pressure</att>
+            <att name="standard_name">air_pressure</att>
+            <att name="units">kPa</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Solar_Radiation</sourceName>
+        <destinationName>Solar_Radiation</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">1</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">0</att>
+            <att name="units"> W/m²</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Unknown</att>
+            <att name="long_name">Solar Radiation</att>
+            <att name="units">W/m²</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>Gust_Speed</sourceName>
+        <destinationName>Gust_Speed</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">-999.9</att>
+            <att name="coordinates">altitude lat lon</att>
+            <att name="port_num" type="long">1</att>
+            <att name="precision" type="long">2</att>
+            <att name="sensor_name">ATMOS 41</att>
+            <att name="sensor_sn">ATM-410009429</att>
+            <att name="sub_sensor_index" type="long">6</att>
+            <att name="units"> m/s</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">30.0</att>
+            <att name="colorBarMinimum" type="double">0.0</att>
+            <att name="coordinates">null</att>
+            <att name="ioos_category">Wind</att>
+            <att name="long_name">Wind Speed Of Gust</att>
+            <att name="standard_name">wind_speed_of_gust</att>
+            <att name="units">m/s</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lat</sourceName>
+        <destinationName>latitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">90.0</att>
+            <att name="colorBarMinimum" type="double">-90.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Latitude</att>
+            <att name="standard_name">latitude</att>
+            <att name="units">degrees_north</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>lon</sourceName>
+        <destinationName>longitude</destinationName>
+        <dataType>double</dataType>
+        <!-- sourceAttributes>
+            <att name="_FillValue" type="double">NaN</att>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="colorBarMaximum" type="double">180.0</att>
+            <att name="colorBarMinimum" type="double">-180.0</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Longitude</att>
+            <att name="standard_name">longitude</att>
+            <att name="units">degrees_east</att>
+        </addAttributes>
+    </dataVariable>
+    <dataVariable>
+        <sourceName>altitude</sourceName>
+        <destinationName>altitude</destinationName>
+        <dataType>long</dataType>
+        <!-- sourceAttributes>
+        </sourceAttributes -->
+        <addAttributes>
+            <att name="_FillValue" type="long">9223372036854775807</att>
+            <att name="ioos_category">Location</att>
+            <att name="long_name">Altitude</att>
+            <att name="standard_name">altitude</att>
+            <att name="units">m</att>
+        </addAttributes>
+    </dataVariable>
+</dataset>
 <dataset type="EDDTableFromAsciiFiles" datasetID="TCM_2203055_Current_SEN_6_Puamana" active="true">
     <reloadEveryNMinutes>10080</reloadEveryNMinutes>
     <updateEveryNMillis>10000</updateEveryNMillis>
